@@ -27,24 +27,7 @@ backdrop-filter:blur(14px);
   z-index: 50;
   pointer-events: auto;
 }
-.links {
-  position: fixed; /* вместо absolute */
-  top: 0;
-  right: -100%;
-  width: 80%;
-  height: 100vh;
-  background: var(--black);
-  display: flex;
-  flex-direction: column;
-  padding: 100px 24px;
-  gap: 32px;
-  transition: right 0.3s ease;
-  z-index: 100;
-}
 
-.showMenu {
-  right: 0; /* выезжает */
-}
 .container{
 width:100%;
 max-width:1200px;
