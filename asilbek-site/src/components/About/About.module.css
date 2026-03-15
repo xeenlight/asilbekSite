@@ -84,7 +84,7 @@
 }
 
 .image {
-  width: 60%;
+  width: 100%;
   height: auto;
   display: block;
   transition: transform 0.5s ease;
@@ -93,7 +93,6 @@
 .imageWrapper:hover .image {
   transform: scale(1.05);
 }
-
 
 /* CTA кнопки */
 .cta {
@@ -122,35 +121,71 @@
   box-shadow: 0 12px 30px rgba(20, 92, 69, 0.4);
 }
 
-/* Responsive */
+/* Responsive адаптация */
 @media (max-width: 1024px) {
   .container {
     grid-template-columns: 1fr;
+    gap: 60px;
   }
 
   .title {
     font-size: 4.5rem;
   }
 
+  .name {
+    font-size: 3.8rem;
+  }
+
   .images {
     margin-top: 60px;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
 @media (max-width: 640px) {
   .about {
-    padding: 100px 5% 80px;
+    padding: 80px 5% 80px;
   }
 
   .title {
     font-size: 3.8rem;
   }
 
-  .cta {
-    flex-direction: column;
+  .name {
+    font-size: 3rem;
+  }
+
+  .intro {
+    font-size: 1.5rem;
+  }
+
+  .story p {
+    font-size: 1.1rem;
+  }
+
+  .thanks {
+    font-size: 1.2rem;
+  }
+
+  .readMore {
+    font-size: 1.2rem;
+  }
+
+  .images {
+    gap: 30px;
+  }
+
+  .imageWrapper {
+    border-radius: 16px;
   }
 
   .ctaButton {
     width: 100%;
+    padding: 16px 0;
+    font-size: 1.1rem;
   }
 }

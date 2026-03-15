@@ -17,7 +17,34 @@ backdrop-filter:blur(14px);
 }
 
 /* CONTAINER */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 50;
+  pointer-events: auto;
+}
+.links {
+  position: fixed; /* вместо absolute */
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 24px;
+  gap: 32px;
+  transition: right 0.3s ease;
+  z-index: 100;
+}
 
+.showMenu {
+  right: 0; /* выезжает */
+}
 .container{
 width:100%;
 max-width:1200px;

@@ -13,23 +13,19 @@ function Navbar(){
 
   const languages = ["ru","uz","en"]
 
-  useEffect(()=>{
+useEffect(() => {
+  const handleScroll = () => setScrolled(window.scrollY > 20);
+  window.addEventListener("scroll", handleScroll);
 
-    const handleScroll = ()=>{
-      setScrolled(window.scrollY > 20)
-    }
+  // Управление скроллом
+  document.body.style.overflow = menu ? "hidden" : "auto";
 
-    window.addEventListener("scroll",handleScroll)
-
-    if(menu){
-      document.body.style.overflow = "hidden"
-    }else{
-      document.body.style.overflow = "auto"
-    }
-
-    return ()=>window.removeEventListener("scroll",handleScroll)
-
-  },[menu])
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    // На очистку сбросить
+    document.body.style.overflow = "auto";
+  };
+}, [menu]);
 
   const changeLanguage = (lng)=>{
     i18n.changeLanguage(lng)
