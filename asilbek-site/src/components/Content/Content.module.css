@@ -1,0 +1,154 @@
+.section{
+padding:100px 8% 160px;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+}
+
+/* GRID ЛЕСЕНКА */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-auto-rows:minmax(220px, auto);
+gap:40px;
+
+grid-template-areas:
+
+"title productivity"
+"youtube productivity"
+"youtube business"
+"grades more";
+}
+
+/* TITLE */
+
+.titleBox{
+grid-area:title;
+display:flex;
+align-items:center;
+}
+
+.title{
+font-size:4.2rem;
+font-weight:800;
+line-height:1.1;
+letter-spacing:-1px;
+}
+
+.accent{
+background:var(--emerald-gradient);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* CARDS AREAS */
+.grid{
+grid-auto-rows:150px;
+}
+.youtube{ grid-row:span 3; }
+.productivity{ grid-row:span 3; }
+.business{ grid-row:span 3; }
+.grades{ grid-row:span 3; }
+.more{ grid-row:span 2; }
+
+/* CARD STYLE */
+
+.card{
+background:rgba(20,92,69,0.08);
+border:1px solid rgba(20,92,69,0.25);
+border-radius:26px;
+padding:42px 36px;
+backdrop-filter:blur(10px);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* ICON */
+
+.iconWrapper{
+width:60px;
+height:60px;
+margin-bottom:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(20,92,69,0.2);
+border-radius:16px;
+}
+
+.icon{
+width:36px;
+}
+
+/* TEXT */
+
+h3{
+font-size:1.9rem;
+font-weight:800;
+margin-bottom:14px;
+color:var(--emerald-light);
+}
+
+p{
+font-size:1.1rem;
+line-height:1.6;
+color:#d6d6d6;
+margin-bottom:26px;
+}
+
+.link{
+font-size:1.05rem;
+font-weight:600;
+color:var(--emerald);
+transition:.3s;
+}
+
+.link:hover{
+color:var(--emerald-light);
+transform:translateX(6px);
+}
+
+/* ADAPTIVE */
+
+@media (max-width:1024px){
+
+.grid{
+grid-template-columns:1fr;
+grid-template-areas:
+"title"
+"youtube"
+"productivity"
+"business"
+"grades"
+"more";
+grid-template-rows:auto;
+}
+
+.title{
+font-size:3rem;
+}
+
+}
+
+@media (max-width:640px){
+
+.section{
+padding:90px 6%;
+}
+
+.card{
+padding:30px 24px;
+}
+
+h3{
+font-size:1.6rem;
+}
+
+}

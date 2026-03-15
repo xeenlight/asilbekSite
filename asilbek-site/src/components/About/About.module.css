@@ -1,0 +1,156 @@
+.about {
+  padding: 100px 8% 100px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 24px;
+  background: var(--emerald-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name {
+  display: block;
+  font-size: 4.8rem;
+}
+
+.intro {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.story p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 24px;
+}
+
+.thanks {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 32px;
+  color: var(--emerald-light);
+}
+
+.heart {
+  color: #ff6b6b;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 1.3rem;
+  color: var(--emerald-light);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.readMore:hover {
+  color: var(--emerald);
+  transform: translateX(8px);
+}
+
+/* Изображения */
+.images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  width: 60%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+}
+
+
+/* CTA кнопки */
+.cta {
+  margin-top: 100px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  background: var(--emerald);
+  color: white;
+  border: none;
+  padding: 18px 48px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ctaButton:hover {
+  background: var(--emerald-light);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(20, 92, 69, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .images {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 100px 5% 80px;
+  }
+
+  .title {
+    font-size: 3.8rem;
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+}

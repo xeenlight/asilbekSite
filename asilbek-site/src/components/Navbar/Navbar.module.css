@@ -1,0 +1,223 @@
+.navbar{
+position:sticky;
+top:0;
+z-index:999;
+
+height:80px;
+
+display:flex;
+align-items:center;
+
+transition:.35s;
+}
+
+.scrolled{
+background:rgba(10,10,10,0.7);
+backdrop-filter:blur(14px);
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+max-width:1200px;
+margin:0 auto;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 20px;
+font-family:"Inter",sans-serif;
+}
+
+/* LOGO */
+
+.logo{
+font-size:24px;
+font-weight:900;
+
+background:var(--emerald-gradient);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* LINKS */
+
+.links{
+display:flex;
+gap:44px;
+}
+
+.links a{
+color:#cfcfcf;
+font-weight:500;
+cursor:pointer;
+transition:.25s;
+position:relative;
+}
+
+.links a:hover{
+color:white;
+}
+
+.links a::after{
+content:"";
+position:absolute;
+bottom:-8px;
+left:0;
+width:0;
+height:2px;
+background:var(--emerald);
+transition:.3s;
+}
+
+.links a:hover::after{
+width:100%;
+}
+
+.activeLink{
+color:white;
+}
+
+.activeLink::after{
+width:100%;
+}
+
+/* RIGHT */
+
+.right{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+/* LANGUAGE */
+
+.languageSwitcher{
+display:flex;
+align-items:center;
+background:rgba(255,255,255,0.05);
+border-radius:40px;
+padding:6px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.circle{
+width:34px;
+height:34px;
+border-radius:50%;
+border:none;
+background:rgba(255,255,255,0.08);
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+.langBtn{
+border:none;
+background:transparent;
+color:#888;
+padding:8px 16px;
+border-radius:30px;
+cursor:pointer;
+transition:.25s;
+}
+
+.langBtn:hover{
+color:white;
+}
+
+.active{
+background:rgba(255,255,255,0.1);
+color:white;
+}
+
+/* BURGER */
+
+.burger{
+display:none;
+flex-direction:column;
+gap:6px;
+cursor:pointer;
+}
+
+.burger span{
+width:26px;
+height:2px;
+background:white;
+transition:.3s;
+}
+
+.activeBurger span:nth-child(1){
+transform:rotate(45deg) translateY(10px);
+}
+
+.activeBurger span:nth-child(2){
+opacity:0;
+}
+
+.activeBurger span:nth-child(3){
+transform:rotate(-45deg) translateY(-11px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.links{
+position:fixed;
+top:0;
+right:0;
+
+height:100vh;
+width:300px;
+
+background:#0b0b0b;
+
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+gap:42px;
+
+padding:0 50px;
+
+transform:translateX(100%);
+transition:.45s;
+
+box-shadow:-20px 0 60px rgba(0,0,0,0.6);
+z-index:999;
+}
+
+.links a{
+font-size:22px;
+}
+
+.showMenu{
+transform:translateX(0);
+}
+
+.burger{
+display:flex;
+z-index:1001;
+}
+
+}
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(3px);
+
+z-index:998;
+animation:fade .3s ease;
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}

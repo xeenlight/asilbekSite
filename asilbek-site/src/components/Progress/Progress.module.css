@@ -1,0 +1,163 @@
+.progressSection {
+  padding: 140px 8% 160px;
+  background: transparent;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 4.2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 120px;
+  background: var(--emerald-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+
+/* Вертикальная линия */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--emerald), transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timelineItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  z-index: 1;
+}
+
+.timelineItem:nth-child(even) {
+  direction: rtl;
+}
+
+.timelineItem:nth-child(even) .content {
+  direction: ltr;
+}
+
+/* Год */
+.yearHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.year {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--emerald-light);
+}
+
+.icon {
+  font-size: 2.4rem;
+}
+
+/* Контент карточки */
+.content {
+  background: rgba(15, 61, 46, 0.12);
+  border: 1px solid rgba(20, 92, 69, 0.3);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.content:hover .image {
+  transform: scale(1.08);
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: white;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.content:hover .playOverlay {
+  opacity: 0.7;
+}
+
+.textContent {
+  padding: 32px;
+}
+
+.text {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 18px;
+}
+
+.videoLink {
+  color: var(--emerald);
+  font-weight: 600;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timelineItem:nth-child(even) {
+    direction: ltr;
+  }
+
+  .mainTitle {
+    font-size: 3.4rem;
+  }
+}
+@media (max-width: 900px) {
+  .timeline::before {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .progressSection {
+    padding: 100px 5% 100px;
+  }
+}
