@@ -42,8 +42,8 @@ function Hero() {
             </h2>
 
             <h1 className={styles.title}>
-              {t("hero.title")}
-            </h1>
+  {t("hero.title")}
+</h1>
 
           </div>
 
