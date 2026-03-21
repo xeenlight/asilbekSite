@@ -263,6 +263,7 @@
   .photoWrapper{
     width:280px;
     height:280px;
+    left: -9px;
   }
 }
 @media (max-width:900px){
@@ -291,6 +292,7 @@
   .photoWrapper{
     width:220px;
     height:220px;
+    left: -9px;
   }
 
   .title{
