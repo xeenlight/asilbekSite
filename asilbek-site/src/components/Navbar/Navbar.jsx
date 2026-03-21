@@ -42,7 +42,7 @@ function Navbar(){
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.container}>
 
-          <div className={styles.logo}>B9 Lab</div>
+          <div className={styles.logo}>Asilbek IELTS</div>
 
           {/* DESKTOP LINKS */}
           <div className={styles.linksDesktop}>
