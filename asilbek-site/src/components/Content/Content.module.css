@@ -1,10 +1,10 @@
 .section{
-padding:100px 8% 160px;
+  padding:40px 20px;
 }
 
 .container{
-max-width:1200px;
-margin:0 auto;
+  max-width:1100px; /* как везде */
+  margin:0 auto;
 }
 
 /* GRID ЛЕСЕНКА */
@@ -57,30 +57,39 @@ grid-auto-rows:150px;
 /* CARD STYLE */
 
 .card{
-background:rgba(20,92,69,0.08);
-border:1px solid rgba(20,92,69,0.25);
-border-radius:26px;
-padding:42px 36px;
-backdrop-filter:blur(10px);
-transition:.4s;
+  background:rgba(17,17,17,0.7); /* серый как hero */
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:28px;
+  padding:40px; /* как heroCard */
+  backdrop-filter:blur(12px);
+  transition:.4s;
 }
 
+/* HOVER → возвращаем зелёный стиль */
+
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  transform:translateY(-6px);
+  background:rgba(20,92,69,0.08);
+  border:1px solid rgba(20,92,69,0.25);
+  box-shadow:0 20px 60px rgba(0,0,0,0.45);
 }
 
 /* ICON */
 
 .iconWrapper{
-width:60px;
-height:60px;
-margin-bottom:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(20,92,69,0.2);
-border-radius:16px;
+  width:56px;
+  height:56px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.05);
+  border-radius:14px;
+  transition:.3s;
+}
+
+.card:hover .iconWrapper{
+  background:rgba(20,92,69,0.2);
 }
 
 .icon{
@@ -93,7 +102,12 @@ h3{
 font-size:1.9rem;
 font-weight:800;
 margin-bottom:14px;
-color:var(--emerald-light);
+  color:#fff; /* белый по дефолту */
+  transition:.3s;
+}
+
+.card:hover h3{
+  color:var(--emerald); /* при hover зелёный */
 }
 
 p{
@@ -106,13 +120,16 @@ margin-bottom:26px;
 .link{
 font-size:1.05rem;
 font-weight:600;
-color:var(--emerald);
-transition:.3s;
+  color:#ccc;
+  transition:.3s;
+}
+
+.card:hover .link{
+  color:var(--emerald);
 }
 
 .link:hover{
-color:var(--emerald-light);
-transform:translateX(6px);
+  transform:translateX(6px);
 }
 
 /* ADAPTIVE */
@@ -151,4 +168,67 @@ h3{
 font-size:1.6rem;
 }
 
+}
+@media (max-width:1024px){
+
+  .grid{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "title"
+      "youtube"
+      "productivity"
+      "business"
+      "grades"
+      "more";
+  }
+
+  .title{
+    font-size:2rem;
+    line-height:1.2;
+    max-width:100%;
+  }
+}
+
+@media (max-width:640px){
+
+  .section{
+    padding:30px 16px;
+  }
+
+  .card{
+    padding:24px 16px; /* как hero */
+    border-radius:20px;
+  }
+
+  h3{
+    font-size:1.2rem;
+  }
+
+  p{
+    font-size:.9rem;
+  }
+}
+
+@media (max-width:360px){
+
+  .section{
+    padding:16px 8px;
+  }
+
+  .card{
+    padding:18px 12px;
+    border-radius:16px;
+  }
+
+  h3{
+    font-size:1.1rem;
+  }
+
+  p{
+    font-size:.85rem;
+  }
+
+  .link{
+    font-size:.9rem;
+  }
 }
