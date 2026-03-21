@@ -1,6 +1,6 @@
 .about{
   position:relative;
-  padding:100px 20px;
+padding: 100px 20px;
   background:#000;
   overflow:hidden;
 }
@@ -11,7 +11,7 @@
   margin:0 auto;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
+gap: 50px;
   align-items:center;
 }
 
@@ -32,7 +32,7 @@
 
 /* TEXT FIX (без обводки) */
 .title{
-  font-size:2.6rem;
+font-size: 2.8rem;
   font-weight:800;
   line-height:1.2;
   margin-bottom:16px;
@@ -372,5 +372,61 @@ bottom: 152px;
 
   .title{
     font-size:2rem;
+  }
+}
+@media(max-width:900px){
+  .about{
+    padding:30px 16px; /* как hero */
+  }
+
+  .container{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .content{
+    padding:24px 16px; /* как heroCard */
+    border-radius:20px;
+  }
+
+  .title{
+    font-size:2rem;
+    line-height:1.2;
+    max-width:100%;
+  }
+
+  .intro{
+    font-size:.95rem;
+    max-width:100%;
+  }
+}
+
+@media(max-width:360px){
+  .about{
+    padding:16px 8px;
+  }
+
+  .content{
+    padding:18px 12px;
+    border-radius:16px;
+  }
+
+  .title{
+    font-size:1.6rem;
+  }
+
+  .intro{
+    font-size:.9rem;
+  }
+
+  .story p{
+    font-size:.85rem;
+  }
+
+  .ctaButton{
+    width:100%;
+    padding:12px;
+    font-size:.9rem;
   }
 }

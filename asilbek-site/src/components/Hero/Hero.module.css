@@ -226,3 +226,107 @@
     font-size:2rem;
   }
 }
+@media (max-width:900px){
+
+  .hero{
+    padding:30px 16px;
+  }
+
+  .content{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .right{
+    align-items:center;
+    max-width:100%; /* 🔥 важно */
+  }
+
+  .title{
+    font-size:2rem;
+    line-height:1.2;
+    max-width:100%;
+  }
+
+  .intro{
+    max-width:100%;
+    font-size:.95rem;
+  }
+
+  .highlights{
+    text-align:left;
+    width:100%;
+    max-width:320px; /* 🔥 чтобы список не растягивался */
+  }
+
+  .photoWrapper{
+    width:280px;
+    height:280px;
+  }
+}
+@media (max-width:900px){
+
+  .heroCard{
+    padding:24px 16px; /* 🔥 меньше отступы */
+    border-radius:20px;
+  }
+
+}
+@media (max-width:360px){
+
+  .hero{
+    padding:16px 8px;
+  }
+
+  .heroCard{
+    padding:18px 12px;
+    border-radius:16px;
+  }
+
+  .content{
+    gap:20px;
+  }
+
+  .photoWrapper{
+    width:220px;
+    height:220px;
+  }
+
+  .title{
+    font-size:1.6rem;
+    line-height:1.2;
+  }
+
+  .hey{
+    font-size:1rem;
+  }
+
+  .intro{
+    font-size:.9rem;
+  }
+
+  .highlights{
+    max-width:100%;
+    padding-left:0;
+  }
+
+  .highlights li{
+    font-size:.85rem;
+    padding-left:16px;
+  }
+
+  .subscribe h3{
+    font-size:1.1rem;
+  }
+
+  .subscribe p{
+    font-size:.8rem;
+  }
+
+  .button{
+    width:100%;
+    padding:12px;
+    font-size:.9rem;
+  }
+}
