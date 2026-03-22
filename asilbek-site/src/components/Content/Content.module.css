@@ -1,52 +1,48 @@
 .section{
   padding:40px 20px;
+  background:var(--bg);
 }
 
 .container{
-  max-width:1100px; /* как везде */
+  max-width:1100px;
   margin:0 auto;
 }
 
 /* GRID ЛЕСЕНКА */
-
 .grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-grid-auto-rows:minmax(220px, auto);
-gap:40px;
-
-grid-template-areas:
-
-"title productivity"
-"youtube productivity"
-"youtube business"
-"grades more";
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-auto-rows:minmax(220px, auto);
+  gap:40px;
+  grid-template-areas:
+    "title productivity"
+    "youtube productivity"
+    "youtube business"
+    "grades more";
 }
 
 /* TITLE */
-
 .titleBox{
-grid-area:title;
-display:flex;
-align-items:center;
+  grid-area:title;
+  display:flex;
+  align-items:center;
 }
 
 .title{
-font-size:4.2rem;
-font-weight:800;
-line-height:1.1;
-letter-spacing:-1px;
+  font-size:4.2rem;
+  font-weight:800;
+  line-height:1.1;
+  letter-spacing:-1px;
+  color:var(--text-dark);
 }
 
 .accent{
-background:var(--emerald-gradient);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  color:var(--accent);
 }
 
-/* CARDS AREAS */
+/* CARD AREAS */
 .grid{
-grid-auto-rows:150px;
+  grid-auto-rows:150px;
 }
 .youtube{ grid-row:span 3; }
 .productivity{ grid-row:span 3; }
@@ -55,27 +51,24 @@ grid-auto-rows:150px;
 .more{ grid-row:span 2; }
 
 /* CARD STYLE */
-
 .card{
-  background:rgba(17,17,17,0.7); /* серый как hero */
-  border:1px solid rgba(255,255,255,.06);
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:28px;
-  padding:40px; /* как heroCard */
+  padding:40px;
   backdrop-filter:blur(12px);
   transition:.4s;
 }
 
-/* HOVER → возвращаем зелёный стиль */
-
+/* HOVER */
 .card:hover{
   transform:translateY(-6px);
-  background:rgba(20,92,69,0.08);
-  border:1px solid rgba(20,92,69,0.25);
-  box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  background:rgba(0,128,255,.08); /* мягкий голубой акцент */
+  border:1px solid rgba(0,128,255,.25);
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
 }
 
 /* ICON */
-
 .iconWrapper{
   width:56px;
   height:56px;
@@ -89,43 +82,42 @@ grid-auto-rows:150px;
 }
 
 .card:hover .iconWrapper{
-  background:rgba(20,92,69,0.2);
+  background:rgba(0,128,255,.2);
 }
 
 .icon{
-width:36px;
+  width:36px;
 }
 
 /* TEXT */
-
 h3{
-font-size:1.9rem;
-font-weight:800;
-margin-bottom:14px;
-  color:#fff; /* белый по дефолту */
+  font-size:1.9rem;
+  font-weight:800;
+  margin-bottom:14px;
+  color:var(--text-light);
   transition:.3s;
 }
 
 .card:hover h3{
-  color:var(--emerald); /* при hover зелёный */
+  color:var(--accent);
 }
 
-p{
-font-size:1.1rem;
-line-height:1.6;
-color:#d6d6d6;
-margin-bottom:26px;
+.pCon{
+  font-size:1.1rem;
+  line-height:1.6;
+  color:var(--text-secondary);
+  margin-bottom:26px;
 }
 
 .link{
-font-size:1.05rem;
-font-weight:600;
-  color:#ccc;
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--text-muted);
   transition:.3s;
 }
 
 .card:hover .link{
-  color:var(--emerald);
+  color:var(--accent);
 }
 
 .link:hover{
@@ -133,44 +125,7 @@ font-weight:600;
 }
 
 /* ADAPTIVE */
-
 @media (max-width:1024px){
-
-.grid{
-grid-template-columns:1fr;
-grid-template-areas:
-"title"
-"youtube"
-"productivity"
-"business"
-"grades"
-"more";
-grid-template-rows:auto;
-}
-
-.title{
-font-size:3rem;
-}
-
-}
-
-@media (max-width:640px){
-
-.section{
-padding:90px 6%;
-}
-
-.card{
-padding:30px 24px;
-}
-
-h3{
-font-size:1.6rem;
-}
-
-}
-@media (max-width:1024px){
-
   .grid{
     grid-template-columns:1fr;
     grid-template-areas:
@@ -180,23 +135,35 @@ font-size:1.6rem;
       "business"
       "grades"
       "more";
+    grid-template-rows:auto;
   }
 
   .title{
-    font-size:2rem;
-    line-height:1.2;
-    max-width:100%;
+    font-size:3rem;
   }
 }
 
 @media (max-width:640px){
+  .section{
+    padding:90px 6%;
+  }
 
+  .card{
+    padding:30px 24px;
+  }
+
+  h3{
+    font-size:1.6rem;
+  }
+}
+
+@media (max-width:640px){
   .section{
     padding:30px 16px;
   }
 
   .card{
-    padding:24px 16px; /* как hero */
+    padding:24px 16px;
     border-radius:20px;
   }
 
@@ -210,7 +177,6 @@ font-size:1.6rem;
 }
 
 @media (max-width:360px){
-
   .section{
     padding:16px 8px;
   }

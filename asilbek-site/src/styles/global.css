@@ -1,41 +1,44 @@
 :root{
+  /* 🎯 BACKGROUND */
+  --bg:#f5f7f6;
 
---black:#000;
---white:#fff;
+  /* 🎯 CARD (чёрные блоки) */
+  --card:#0e1110;
+  --card-soft:#151918;
 
---emerald:#0f3d2e;
---emerald-light:#145c45;
+  /* 🎯 TEXT */
+  --text-dark:#0e1110;       /* на белом */
+  --text-light:#ffffff;      /* на карточках */
+  --text-muted:#a0a7a5;
+--text-secondary:#ffffff;
+  /* 🎯 BORDER */
+  --border:rgba(0,0,0,0.08);
 
---emerald-gradient:linear-gradient(
-135deg,
-#0f3d2e,
-#145c45,
-#0a3a2f
-);
+  /* 🎯 АКЦЕНТ (голубой как у рефа) */
+  --accent:#4da6ff;
+  --accent-soft:#7fc2ff;
 
+  /* 🎯 BUTTON */
+  --button-bg:#00aeef;
+  --button-hover:#00aeef;
+  --button-text:#ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: Inter, sans-serif;
-  
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 
 body{
-background:#000;
-color:white;
-font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--text-dark);
+  font-family:'Sofia Sans Semi Condensed', sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
 }

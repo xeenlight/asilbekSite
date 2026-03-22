@@ -31,7 +31,7 @@ function Content() {
             </div>
 
             <h3>{t("help.cards.youtube.title")}</h3>
-            <p>{t("help.cards.youtube.desc")}</p>
+            <p className={styles.pCon}> {t("help.cards.youtube.desc")}</p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
@@ -51,7 +51,7 @@ function Content() {
             </div>
 
             <h3>{t("help.cards.productivity.title")}</h3>
-            <p>{t("help.cards.productivity.desc")}</p>
+            <p className={styles.pCon}>{t("help.cards.productivity.desc")}</p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
@@ -71,7 +71,7 @@ function Content() {
             </div>
 
             <h3>{t("help.cards.business.title")}</h3>
-            <p>{t("help.cards.business.desc")}</p>
+            <p className={styles.pCon}>{t("help.cards.business.desc")}</p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
@@ -91,7 +91,7 @@ function Content() {
             </div>
 
             <h3>{t("help.cards.grades.title")}</h3>
-            <p>{t("help.cards.grades.desc")}</p>
+            <p className={styles.pCon}>{t("help.cards.grades.desc")}</p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →

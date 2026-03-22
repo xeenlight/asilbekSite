@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './AboutSection.module.css';
+import asilbekMain2 from "../../assets/images/asilbekMain2.png";
 
 function AboutSection() {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ function AboutSection() {
               {t('aboutSection.hey')}
             </h1>
             <motion.img
-              src="/assets/images/asilbek-portrait.jpg"
+              src={asilbekMain2}
               alt="Асилбек Махкамов"
               className={styles.portrait}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -47,7 +48,7 @@ function AboutSection() {
                 transition={{ delay: 0.1 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact1')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact1')}</p>
               </motion.div>
 
               <motion.div 
@@ -57,7 +58,7 @@ function AboutSection() {
                 transition={{ delay: 0.2 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact2')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact2')}</p>
               </motion.div>
 
               <motion.div 
@@ -67,7 +68,7 @@ function AboutSection() {
                 transition={{ delay: 0.3 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact3')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact3')}</p>
               </motion.div>
             </div>
 
@@ -80,7 +81,7 @@ function AboutSection() {
                 transition={{ delay: 0.4 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact4')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact4')}</p>
               </motion.div>
 
               <motion.div 
@@ -90,7 +91,7 @@ function AboutSection() {
                 transition={{ delay: 0.5 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact5')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact5')}</p>
               </motion.div>
 
               <motion.div 
@@ -100,7 +101,7 @@ function AboutSection() {
                 transition={{ delay: 0.6 }}
               >
                 <span className={styles.check}>✓</span>
-                <p>{t('aboutSection.fact6')}</p>
+                <p className={styles.pAbout}>{t('aboutSection.fact6')}</p>
               </motion.div>
             </div>
           </div>
