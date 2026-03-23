@@ -1,4 +1,29 @@
 {
-  "hero_title": "Build a life you love",
-  "hero_subtitle": "Entrepreneur, Creator, Educator"
+"nav": {
+  "home": "Главная",
+  "about": "Обо мне",
+  "content": "Контент"
+},
+  "hero": {
+    "hey": "Hey friends",
+    "title": "I’m Asilbek",
+    "intro": "I’ve been helping students prepare for IELTS for over 5 years. My band score is 8.5, and more than 1,000 students have studied with me and achieved their educational goals, including 100+ who scored 7+.",
+    
+    
+    "subscribeTitle": "Подпишись на мой Telegram-канал",
+    "subscribeText": "Получай ежедневные советы по английскому, разборы сложных тем, мотивацию и полезные материалы прямо в телефон. Всё бесплатно.",
+    "subscribeButton": "Подписаться на канал",
+    "note": "Нажимая кнопку, ты соглашаешься получать сообщения от канала. Отписаться можно в любой момент."
+  },
+    "subscribe": {
+    "title": {
+      "part1": "Join",
+      "accent": "IELTS Delivered"
+    },
+    "subtitle": "Become a part of a fast-growing online community and receive regular IELTS insights. Every day, I share actionable IELTS tips, proven preparation methods, and test-day strategies to help you perform at your best — free, and always will be.",
+    "button": "Go to Telegram",
+    "reviews": "200+ reviews",
+    "note": "You can leave at any time by clicking the unsubscribe button"
+  }
+  
 }

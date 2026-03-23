@@ -1,279 +1,191 @@
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:60px 20px;
-  background:var(--bg);
-  position:relative;
-  overflow:hidden;
+.hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  padding: 60px clamp(10px, 35vw - 300px, 390px);
+
+  /* 🔥 ФОН (управляемый) */
+  --bg-x: 50%;
+  --bg-y: 20%;
+  --bg-size: cover;
+
+  background-size: var(--bg-size);
+  background-position: var(--bg-x) var(--bg-y);
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+ height: clamp(550px, 18.75vw + 490px, 850px);
 }
 
-/* ❌ без glow */
-.bgGlow{
-  display:none;
+
+
+/* ❌ убрали glow */
+.bgGlow {
+  display: none;
 }
 
-/* CARD */
-.heroCard{
-  position:relative;
-  z-index:2;
+/* 🔥 теперь просто контейнер */
+.heroCard {
+  position: relative;
+  z-index: 2;
 
-  width:100%;
-  max-width:1100px;
+  width: 100%;
+  max-width: 1100px;
 
-  background:var(--card);
-  border-radius:24px;
-  padding:48px;
-
-  border:1px solid var(--border);
-
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-/* GRID */
-.content{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
+/* 🔥 одна колонка вместо двух */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: end;
+
+  max-width: 520px;
 }
 
-/* LEFT */
-.left{
-  display:flex;
-  justify-content:center;
-}
-
-/* PHOTO */
-.photoWrapper{
-  width:460px;
-  height:460px;
-  border-radius:50%;
-  overflow:hidden;
-  position:relative;
-}
-
-/* убрали glow */
-.photoWrapper::before{
-  display:none;
-}
-
-/* border */
-.photoWrapper::after{
-  content:"";
-  position:absolute;
-  inset:-4px;
-  border-radius:50%;
-  border:1px solid var(--border);
-}
-
-.photo{
-  position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  object-fit:cover;
+/* ❌ убрали фото */
+.left {
+  display: none;
 }
 
 /* RIGHT */
-.right{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 /* TEXT */
-.hey{
-  font-size:1.2rem;
-  color:var(--text-muted);
+.hey {
+  font-size: 2.2rem;
+  color: #ccc;
 }
 
-.wave{
-  display:inline-block;
-  animation:wave 2s infinite;
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
 }
 
-@keyframes wave{
-  0%{transform:rotate(0)}
-  20%{transform:rotate(20deg)}
-  40%{transform:rotate(-10deg)}
-  60%{transform:rotate(15deg)}
-  100%{transform:rotate(0)}
+@keyframes wave {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(15deg); }
+  100% { transform: rotate(0); }
 }
 
-.title{
-  font-size:2.8rem;
-  font-weight:800;
-  line-height:1.1;
-  max-width:520px;
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 520px;
 
-  color:var(--text-light);
+  color: #fff;
 }
 
-.intro{
-  font-size:1rem;
-  color:var(--text-secondary);
-  max-width:500px;
+.intro {
+  font-size: 1.25rem;
+  color: #ddd;
+  max-width: 500px;
+  
 }
 
-/* LIST */
-.highlights{
-  list-style:none;
+/* ❌ полностью убрали подписку */
+.subscribe {
+  display: none;
 }
 
-.highlights li{
-  margin-bottom:10px;
-  padding-left:20px;
-  position:relative;
-  font-size:.95rem;
-  color:var(--text-secondary);
-  transition:.2s;
-}
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
 
-.highlights li:hover{
-  transform:translateX(3px);
-  color:var(--text-light);
-}
+@media (max-width: 900px) {
 
-.highlights li::before{
-  content:"";
-  width:6px;
-  height:6px;
-  background:var(--accent);
-  position:absolute;
-  left:0;
-  top:7px;
-}
+  .hero {
+    padding: 40px 16px;
 
-/* SUBSCRIBE */
-.subscribe{
-  margin-top:30px;
-  padding-top:20px;
-  border-top:1px solid var(--border);
-  text-align:center;
-}
+    /* можно отдельно двигать фон */
+    --bg-x: 0%;
 
-.subscribe h3{
-  font-size:1.3rem;
-  color:var(--text-light);
-}
-
-.subscribe p{
-  font-size:.9rem;
-  color:var(--text-muted);
-}
-
-/* BUTTON */
-.button{
-  margin-top:16px;
-
-  background:var(--button-bg);
-  color:var(--button-text);
-
-  padding:12px 28px;
-  border-radius:10px;
-  border:none;
-
-  font-size:.95rem;
-  font-weight:500;
-  cursor:pointer;
-
-  transition:.2s;
-}
-
-.button:hover{
-  background:var(--button-hover);
-  transform:translateY(-2px);
-}
-
-/* MOBILE */
-@media (max-width:900px){
-
-  .hero{
-    padding:40px 16px;
   }
 
-  .content{
-    grid-template-columns:1fr;
-    gap:30px;
-    text-align:center;
+  .content {
+    text-align: center;
+    justify-items: center;
   }
 
-  .right{
-    align-items:center;
-    max-width:100%;
+  .title {
+    font-size: 2rem;
+    line-height: 1.2;
+    max-width: 100%;
   }
 
-  .photoWrapper{
-    width:300px;
-    height:300px;
-  }
-
-  .title{
-    font-size:2rem;
-    line-height:1.2;
-    max-width:100%;
-  }
-
-  .intro{
-    max-width:100%;
-    font-size:.95rem;
-  }
-
-  .highlights{
-    text-align:left;
-    width:100%;
-    max-width:320px;
+  .intro {
+    max-width: 100%;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width:440px){
+@media (max-width: 650px) {
 
-  .hero{
-    padding:20px 10px;
+  .hero {
+    padding: 20px 10px;
+
+    /* ещё ниже для маленьких экранов */
+    --bg-x: 20%;
   }
 
-  .heroCard{
-    padding:18px 12px;
-    border-radius:16px;
+  .title {
+    font-size: 1.6rem;
   }
 
-  .content{
-    gap:20px;
+  .hey {
+    font-size: 1rem;
   }
 
-  .photoWrapper{
-    width:220px;
-    height:220px;
+  .intro {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 430px) {
+
+  .hero {
+    padding: 20px 10px;
+    height: 600px;
+
+
+    /* ещё ниже для маленьких экранов */
+    --bg-x: 31%;
+      --bg-size: 250%;
+
+  background-size: var(--bg-size);
+  background-position: var(--bg-x) var(--bg-y);
+  background-repeat: no-repeat;
+  background-color: #000;
+  }
+  .content {
+    text-align: center;
+    justify-items: center;
+    gap: 5px;
+  }
+  .title {
+
+    font-size: 1.6rem;
   }
 
-  .title{
-    font-size:1.6rem;
+  .hey {
+        margin-top: 400px;
+    font-size: 1rem;
   }
 
-  .hey{
-    font-size:1rem;
-  }
-
-  .intro{
-    font-size:.9rem;
-  }
-
-  .highlights li{
-    font-size:.85rem;
-    padding-left:16px;
-  }
-
-  .subscribe h3{
-    font-size:1.1rem;
-  }
-
-  .subscribe p{
-    font-size:.8rem;
-  }
-
-  .button{
-    width:100%;
-    padding:12px;
-    font-size:.9rem;
+  .intro {
+    font-size: 0.9rem;
   }
 }

@@ -1,4 +1,30 @@
 {
-  "hero_title": "Sevgan hayotingni qur",
-  "hero_subtitle": "Tadbirkor, kontent yaratuvchi, o‘qituvchi"
+"nav": {
+  "home": "Главная",
+  "about": "Обо мне",
+  "content": "Контент"
+},
+  "hero": {
+    "hey": "Salom do’stlar",
+    "title": "Men Asilbekman",
+    "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. Mening shaxsiy natijam 8.5, va 1 000 dan ortiq talaba men bilan o‘qib, o’z maqsadlariga erishgan, ularning 100+ nafari 7+ qo‘lga kiritgan.",
+    
+    
+    "subscribeTitle": "Подпишись на мой Telegram-канал",
+    "subscribeText": "Получай ежедневные советы по английскому, разборы сложных тем, мотивацию и полезные материалы прямо в телефон. Всё бесплатно.",
+    "telegramPlaceholder": "Твой @username в Telegram",
+    "subscribeButton": "Подписаться на канал",
+    "note": "Нажимая кнопку, ты соглашаешься получать сообщения от канала. Отписаться можно в любой момент."
+  },
+    "subscribe": {
+    "title": {
+      "part1": "qo‘shiling",
+      "accent": "ELTS Delivered’ga"
+    },
+    "subtitle": "Tez rivojlanayotgan onlayn hamjamiyatning bir qismiga aylaning va IELTS bo‘yicha muntazam foydali ma’lumotlarni oling. Har kuni men amaliy IELTS maslahatlari, sinalgan tayyorgarlik usullari va imtihon kuni uchun strategiyalarni ulashaman — eng yaxshi natijaga erishishingiz uchun, bepul va har doim shunday bo‘ladi.",
+    "button": "Telegram-ga o'tish",
+"reviews": "200+ sharhlar",
+"note": "Siz istalgan vaqtda obunani bekor qilish tugmasini bosib chiqishingiz mumkin"
+  }
+  
 }
