@@ -69,7 +69,7 @@
 }
 
 .name{
-  color:var(--accent);
+  color:var(--text-light);
 }
 
 .intro{
