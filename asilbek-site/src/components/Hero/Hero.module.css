@@ -20,7 +20,16 @@
  height: clamp(550px, 18.75vw + 490px, 850px);
 }
 
+/* по умолчанию ничего нет */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 
+  background: transparent;
+  pointer-events: none;
+}
 
 /* ❌ убрали glow */
 .bgGlow {
@@ -46,7 +55,7 @@
   grid-template-columns: 1fr;
   gap: 18px;
   align-items: end;
-
+z-index: 3;
   max-width: 520px;
 }
 
@@ -65,7 +74,7 @@
 /* TEXT */
 .hey {
   font-size: 2.2rem;
-  color: #ccc;
+  color: var(--text-light);
 }
 
 .wave {
@@ -82,7 +91,7 @@
 }
 
 .title {
-  font-size: 3.8rem;
+  font-size: 5.8rem;
   font-weight: 800;
   line-height: 1.1;
   max-width: 520px;
@@ -91,9 +100,10 @@
 }
 
 .intro {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: #ddd;
   max-width: 500px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
   
 }
 
@@ -113,12 +123,23 @@
 
     /* можно отдельно двигать фон */
     --bg-x: 0%;
-
+    display: flex;
+    justify-content: center;
+    align-items: end;
   }
-
+ .hero::before {
+background: linear-gradient(
+  to top,
+  rgba(0,0,0,1) 0%,
+  rgba(0,0,0,0.85) 25%,
+  rgba(0,0,0,0.5) 50%,
+  transparent 75%
+);
+  }
   .content {
     text-align: center;
     justify-items: center;
+    gap: 5px;
   }
 
   .title {

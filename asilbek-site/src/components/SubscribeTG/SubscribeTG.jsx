@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./SubscribeTG.module.css";
-import qr from "../../assets/images/asilbek.jpg"; // ← добавь свой QR
+import qr from "../../assets/images/qr.png"; 
 
 function SubscribeTG() {
   const { t } = useTranslation();

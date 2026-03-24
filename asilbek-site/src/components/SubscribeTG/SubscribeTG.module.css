@@ -68,7 +68,7 @@
   height: 180px;
   padding: 10px;
   border-radius: 20px;
-  background: rgba(20,20,20,.6);
+  background: var(--text-light);
   border: 1px solid rgba(255,255,255,.06);
 }
 
@@ -76,6 +76,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+
 }
 
 /* BUTTON */
@@ -108,6 +109,8 @@
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
+        text-align: center;
+    justify-items: center;
   }
 
   .title {
@@ -130,6 +133,9 @@
     padding: 20px 12px;
     border-radius: 16px;
   }
+.subscribe {
+  padding: 16px 8px;
+}
 
   .title {
     font-size: 1.6rem;

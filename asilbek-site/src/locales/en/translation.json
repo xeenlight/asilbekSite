@@ -24,6 +24,21 @@
     "button": "Go to Telegram",
     "reviews": "200+ reviews",
     "note": "You can leave at any time by clicking the unsubscribe button"
+  },
+
+  "about": {
+    "hey": "Hi, I’m",
+    "name": "Asilbek Makhkamov",
+    "intro": "I help students succeed in their exams with confidence. I’ve always loved learning—starting school two years early and graduating with a perfect 4.0 GPA. I carried that drive into university, earning another 4.0 in engineering.",
+    "story1": "My journey with IELTS began in 11th grade when I took the test myself and scored 7.5—higher than most teachers at the time. Inspired, I started working at a local test prep center, first as a teacher assistant, then as a full teacher. Over four years, I’ve guided over a thousand students to results far above Uzbekistan’s average—most scoring 6.5, 7, or higher.",
+    "story2": "Today, I run my own test prep center, creating courses and resources to make exam preparation smarter, easier, and more effective. I’m now launching online programs to reach even more learners, helping them achieve high scores and pursue their academic goals without the stress.",
+    "story3": "Education changed my life, and now I’m here to help students achieve their best results and unlock their potential.",
+    "readFull": "Read my full story",
+
+            "watchVideos": "Watch Videos",
+    "readArticles": "Read Articles",
+    "readBook": "Read Book / Course"
   }
+  
   
 }

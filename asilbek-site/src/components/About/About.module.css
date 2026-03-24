@@ -1,329 +1,101 @@
 .about{
-  position:relative;
   padding:100px 20px;
   background:var(--bg);
-  overflow:hidden;
 }
 
-/* CONTAINER */
-.container{
+/* 🔥 КАРТОЧКА С ФОНОМ */
+.aboutCard{
+  position:relative;
+
   max-width:1100px;
   margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
 
-/* CARD */
-.content{
-  background:var(--card);
-
-  padding:40px;
-  border-radius:24px;
+  padding:48px;
+  border-radius:28px;
 
   border:1px solid var(--border);
+  box-shadow:0 30px 80px rgba(0,0,0,.15);
 
-  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  overflow:hidden;
+
+  /* 🔥 УПРАВЛЕНИЕ ФОНОМ */
+  --bg-x: 80%;
+  --bg-y: 10%;
+  --bg-size: cover;
+
+  background-image: inherit;
+  background-size: var(--bg-size);
+  background-position: var(--bg-x) var(--bg-y);
+  background-repeat: no-repeat;
 }
 
-/* TITLE */
+/* 🔥 затемнение */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.6) 40%,
+    rgba(0,0,0,0.2) 70%,
+    transparent 100%
+  );
+  z-index:1;
+}
+
+/* CONTENT */
+.content{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:1fr;
+  max-width:520px;
+}
+
+/* LEFT */
+.left{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* TEXT */
 .title{
   font-size:2.8rem;
   font-weight:800;
   line-height:1.2;
-  margin-bottom:16px;
-
-  color:var(--text-light);
+  color:#fff;
 }
 
-/* NAME (акцент) */
 .name{
   color:var(--accent);
 }
 
-/* TEXT */
 .intro{
   font-size:1rem;
-  color:var(--text-secondary);
-  margin-bottom:20px;
+  color: var(--text-light);
+  line-height:1.7;
 }
 
 .story p{
   font-size:.95rem;
+  color: var(--text-light);
   line-height:1.7;
-  color:var(--text-secondary);
-  margin-bottom:12px;
+  margin-bottom:18px;
+
 }
 
-/* THANKS */
-.thanks{
-  margin-top:14px;
-  color:var(--accent);
-  font-weight:600;
-}
-
-/* READ MORE */
 .readMore{
-  display:inline-block;
-  margin-top:16px;
+  margin-top:10px;
   font-size:.9rem;
-  color:var(--text-muted);
+  color:#aaa;
   transition:.2s;
 }
 
 .readMore:hover{
   color:var(--accent);
   transform:translateX(6px);
-}
-
-/* IMAGES */
-.images{
-  position:relative;
-  height:420px;
-
-  --x:0px;
-  --y:0px;
-}
-
-/* IMAGE */
-.imageWrapper{
-  position:absolute;
-  border-radius:50%;
-  overflow:hidden;
-
-  background:var(--card);
-  border:1px solid var(--border);
-
-  box-shadow:0 10px 30px rgba(0,0,0,.1);
-
-  transform:translate(var(--x), var(--y));
-  transition:.3s;
-  cursor:pointer;
-}
-
-/* INNER SHADOW (мягче) */
-.imageWrapper::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:50%;
-  box-shadow:inset 0 0 20px rgba(0,0,0,.3);
-}
-
-/* ORBIT (ослабили) */
-.imageWrapper::before{
-  content:"";
-  position:absolute;
-  inset:-6px;
-  border-radius:50%;
-  border:1px dashed var(--border);
-  animation:spin 20s linear infinite;
-  opacity:.3;
-}
-
-@keyframes spin{
-  from{transform:rotate(0)}
-  to{transform:rotate(360deg)}
-}
-
-/* HOVER */
-.imageWrapper:hover{
-  transform:translate(var(--x), var(--y)) scale(1.08);
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-
-.image{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.3s;
-}
-
-.imageWrapper:hover .image{
-  transform:scale(1.1);
-}
-
-/* POSITIONS (оставил твои) */
-.img1{
-  width:160px;
-  height:160px;
-  top:20px;
-  left:40px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-  top:140px;
-  right:20px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-  bottom:20px;
-  left:120px;
-  animation:float 5s ease-in-out infinite;
-}
-@media(max-width:900px){
-.img1{
-  width:160px;
-  height:160px;
-  top:20px;
-  left:40px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-  top:140px;
-  right:20px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-  bottom:20px;
-  left:337px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-@media(max-width:750px){
-.img1{
-  width:160px;
-  height:160px;
-  top:20px;
-  left:40px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-  top:140px;
-  right:20px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-  bottom:20px;
-  left:271px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-
-@media(max-width:700px){
-.img1{
-  width:160px;
-  height:160px;
-  top:20px;
-  left:40px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-  top:140px;
-  right:20px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-  bottom:20px;
-  left:257px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-@media(max-width:670px){
-.img1{
-  width:160px;
-  height:160px;
-  top:20px;
-  left:40px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-  top:140px;
-  right:20px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-  bottom:176px;
-  left:257px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-@media(max-width:420px){
-.img1{
-        width: 100px;
-        height: 100px;
-        top: 20px;
-        left: -3px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-  width:200px;
-  height:200px;
-        top: 133px;
-        right: 94px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-        bottom: 164px;
-        left: 206px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-@media(max-width:300px){
-.img1{
-        width: 100px;
-        height: 100px;
-        top: 20px;
-        left: -3px;
-  animation:float 6s ease-in-out infinite;
-}
-
-.img2{
-        width: 180px;
-        height: 180px;
-        top: 144px;
-        right: 72px;
-  animation:float 7s ease-in-out infinite;
-}
-
-.img3{
-  width:140px;
-  height:140px;
-bottom: 152px;
-        left: 109px;
-  animation:float 5s ease-in-out infinite;
-}
-}
-/* FLOAT */
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-12px)}
-  100%{transform:translateY(0)}
 }
 
 /* CTA */
@@ -338,8 +110,8 @@ bottom: 152px;
 .ctaButton{
   background:var(--card);
   border:1px solid var(--border);
-
   color:var(--text-light);
+
   padding:12px 26px;
   font-size:.9rem;
   border-radius:12px;
@@ -354,26 +126,33 @@ bottom: 152px;
   color:var(--accent);
 }
 
-/* MOBILE */
+/* ================= */
+/* 📱 MOBILE */
+/* ================= */
+
 @media(max-width:900px){
 
   .about{
     padding:40px 16px;
   }
 
-  .container{
-    grid-template-columns:1fr;
-    gap:30px;
-    text-align:center;
+  .aboutCard{
+    padding:24px 16px;
+    border-radius:20px;
+
+    /* 🔥 двигаем фон */
+    background-image: none;
+    background-color: var(--card);
+    background-size: 0;
+  }
+
+  .overlay{
+    background:none;
   }
 
   .content{
-    padding:24px 16px;
-    border-radius:20px;
-  }
-
-  .images{
-    height:300px;
+    text-align:center;
+    max-width:100%;
   }
 
   .title{
@@ -387,13 +166,12 @@ bottom: 152px;
 
 @media(max-width:360px){
 
-  .about{
-    padding:16px 8px;
-  }
-
-  .content{
+  .aboutCard{
     padding:18px 12px;
     border-radius:16px;
+
+    --bg-x: 60%;
+    --bg-size: 140%;
   }
 
   .title{
@@ -410,7 +188,5 @@ bottom: 152px;
 
   .ctaButton{
     width:100%;
-    padding:12px;
-    font-size:.9rem;
   }
 }

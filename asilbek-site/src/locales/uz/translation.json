@@ -8,8 +8,6 @@
     "hey": "Salom do’stlar",
     "title": "Men Asilbekman",
     "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. Mening shaxsiy natijam 8.5, va 1 000 dan ortiq talaba men bilan o‘qib, o’z maqsadlariga erishgan, ularning 100+ nafari 7+ qo‘lga kiritgan.",
-    
-    
     "subscribeTitle": "Подпишись на мой Telegram-канал",
     "subscribeText": "Получай ежедневные советы по английскому, разборы сложных тем, мотивацию и полезные материалы прямо в телефон. Всё бесплатно.",
     "telegramPlaceholder": "Твой @username в Telegram",
@@ -25,6 +23,20 @@
     "button": "Telegram-ga o'tish",
 "reviews": "200+ sharhlar",
 "note": "Siz istalgan vaqtda obunani bekor qilish tugmasini bosib chiqishingiz mumkin"
+  },
+    "about": {
+    "hey": "Salom, men",
+    "name": "Asilbek Makhkamov",
+    "intro": "Men talabalarni imtihonlarda muvaffaqiyatga erishishlariga ishonch bilan yordam beraman. Men har doim o‘qishni yaxshi ko‘rganman — tengdoshlarimdan ikki yil oldin maktabni boshladim va qizil attestat bilan tugatdim. Ushbu ishtiyoqni universitetda ham davom ettirib, muhandislik bo‘yicha yana bir qizil diplom oldim.",
+    "story1": "Mening IELTS bilan tanishuvim 11-sinfda boshlanib, imtihondan 7.5 ball oldim — o‘sha vaqtdagi ko‘pchilik o‘qituvchilardan yuqori. Shu ilhom bilan men mahalliy test tayyorlash markazida ishlashni boshladim, avval yordamchi, keyin esa to‘liq o‘qituvchi sifatida. To‘rt yil davomida mingdan ortiq talabalarga yordam berdim, ularning ko‘pchiligi O‘zbekiston o‘rtacha natijasidan yuqori — 6.5, 7 va undan yuqori ball oldi.",
+    "story2": "Bugun men o‘z test tayyorlash markazimni boshqaraman, kurslar va resurslar yarataman, shunda tayyorgarlik samarali, oson va qulay bo‘lsin. Hozirda onlayn dasturlarni ishga tushiryapman, shunda yanada ko‘proq talabalarni yuqori ball olish va o‘quv maqsadlariga ishonch bilan erishishda qo‘llab-quvvatlash mumkin.",
+    "story3": "Ta’lim hayotimni o‘zgartirdi, va endi men talabalarimga o‘z potensialini ochishda va eng yaxshi natijalarga erishishda yordam berishga tayyorman.",
+    "readFull": "To‘liq hikoyamni o‘qing",
+
+
+            "watchVideos": "Videolarni ko‘rish",
+    "readArticles": "Maqolalarni o‘qing",
+    "readBook": "Kitoblarni o‘qing / Kurs"
   }
   
 }

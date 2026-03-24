@@ -19,9 +19,9 @@ return(
 
 <SubscribeTG/>
 
-<About/>
-
 <Content/>
+
+<About/>
 
 <Progress/>
 
