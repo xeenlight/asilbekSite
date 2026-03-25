@@ -133,11 +133,11 @@
 @media(max-width:900px){
 
   .about{
-padding: 16px 8px;
+        padding:40px 20px;
   }
 
   .aboutCard{
-    padding:24px 16px;
+        padding:20px 12px;
     border-radius:20px;
 
     /* 🔥 двигаем фон */
@@ -167,7 +167,7 @@ padding: 16px 8px;
 @media(max-width:360px){
 
   .aboutCard{
-    padding:18px 12px;
+    padding: 20px 12px;
     border-radius:16px;
 
     --bg-x: 60%;

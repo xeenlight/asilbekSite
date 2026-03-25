@@ -145,7 +145,7 @@ h3{
 
 @media (max-width:640px){
   .section{
-    padding:90px 6%;
+    padding:40px 20px;
   }
 
   .card{
@@ -159,7 +159,7 @@ h3{
 
 @media (max-width:640px){
   .section{
-    padding:30px 16px;
+    padding:40px 20px;
   }
 
   .card{
