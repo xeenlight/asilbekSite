@@ -15,6 +15,15 @@
     "subscribeButton": "Подписаться на канал",
     "note": "Нажимая кнопку, ты соглашаешься получать сообщения от канала. Отписаться можно в любой момент."
   },
+
+    "story": {
+  "title": "My Story",
+  "part1": "Hello, I'm Asilbek Makhkamov, and my passion is helping students succeed in their exams with confidence. My own journey in education started early—I was always curious and motivated, and I actually began school two years ahead of many of my peers. Thanks to a few smart study strategies I picked up along the way, I consistently excelled, graduating from school with a perfect 4.0 GPA.",
+  "part2": "I went on to study engineering at university, and even there, I continued to thrive, earning another 4.0 GPA upon graduation. But my path took an exciting turn toward language education when, in the 11th grade, I took the IELTS exam myself and scored 7.5—well above the average level at the time. That experience opened my eyes to the difference that effective preparation and guidance can make.",
+  "part3": "Soon after, I began working as a teacher assistant at a local test prep center. Over the next four years, I taught and guided students one-on-one and in groups, helping over a thousand learners achieve results far above the national average. While the average IELTS score in Uzbekistan hovered around 5.5, many of my students consistently scored 6.5, 7, or higher. Seeing their success was incredibly rewarding and solidified my commitment to education.",
+  "part4": "Building on that experience, I launched my own test prep center, where I focus on creating high-quality courses and resources for students. Over the past year, I’ve been developing both offline and online programs, aiming to make test preparation more effective, accessible, and less stressful for every student. My goal is simple: to empower learners to achieve their best scores and pursue their academic dreams with confidence.",
+  "part5": "Looking ahead, I want this page to be more than just a hub for learning—I want it to be a window into my journey. I’ll share the experiences, lessons, and discoveries I encounter along the way, so you can see exactly what goes into building success and growth. Together, we’ll navigate this path, and I’ll make sure you’re fully prepared, inspired, and supported every step of the way."
+},
     "subscribe": {
     "title": {
       "part1": "Join",

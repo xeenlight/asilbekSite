@@ -11,27 +11,6 @@ function AboutSection() {
     <section className={styles.aboutSection} id="about">
       <div className={styles.container}>
 
-        {/* Главный заголовок + фото */}
-        <div className={styles.header}>
-          <div className={styles.titleWrapper}>
-            <h1 className={styles.title}>
-              {t('aboutSection.hey')}
-            </h1>
-            <motion.img
-              src={asilbekMain2}
-              alt="Асилбек Махкамов"
-              className={styles.portrait}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            />
-          </div>
-
-          <p className={styles.subtitle}>
-            {t('aboutSection.subtitle')}
-          </p>
-        </div>
-
         {/* Quick Facts */}
         <div className={styles.factsSection}>
           <h2 className={styles.factsTitle}>

@@ -24,6 +24,14 @@
 "reviews": "200+ sharhlar",
 "note": "Siz istalgan vaqtda obunani bekor qilish tugmasini bosib chiqishingiz mumkin"
   },
+    "story": {
+  "title": "Mening hikoyam",
+  "part1": "Salom, men Asilbek Makhkamov, va mening ishtiyoqim – talabalarni imtihonlarda muvaffaqiyatga erishishlariga ishonch bilan yordam berish. Mening ta’lim yo‘lim erta boshlangan — men doimo qiziquvchan va motivatsiyalangan edim, va aslida ko‘pchilik tengdoshlarimdan ikki yil oldin maktabni boshladim. Yo‘l davomida o‘rganib olgan bir nechta samarali o‘quv strategiyalari tufayli men doimo a’lo natijalar bilan o‘qib, maktabni qizil attestat bilan tugatdim.",
+  "part2": "Men universitetda muhandislik bo‘yicha o‘qishni davom ettirdim va u yerda ham muvaffaqiyatli bo‘ldim, qizil diplom bilan tamomladim. Lekin mening yo‘lim 11-sinfda IELTS imtihonini topshirib, 7.5 natija olganimda til ta’limi sohasiga qiziqish bilan burildi — bu vaqtdagi o‘qituvchilarning ko‘pchiligidan ancha yuqori edi. Bu tajriba samarali tayyorgarlik va to‘g‘ri yo‘naltirish natijaga qanday katta ta’sir ko‘rsatishini ko‘rsatdi.",
+  "part3": "Tez orada men mahalliy test tayyorlash markazida o‘qituvchi yordamchisi sifatida ishlashni boshladim. Keyingi to‘rt yil davomida men mingdan ortiq talabalarga individual va guruh darslarida yordam berib, milliy o‘rtacha natijadan ancha yuqori natijalarga erishishlariga yordam berdim. O‘zbekiston bo‘yicha IELTS o‘rtacha natijasi 5.5 bo‘lsa-da, ko‘pchilik talabalarim 6.5, 7 va undan yuqori ball oldi. Ularning muvaffaqiyatlarini ko‘rish juda yoqimli bo‘ldi va ta’limga bo‘lgan sadoqatimni mustahkamladi.",
+  "part4": "Bu tajribaga tayanib, men o‘z test tayyorlash markazimni ochdim, talabalarga yuqori sifatli kurslar va resurslar yarataman. So‘nggi yil davomida men ham oflayn, ham onlayn dasturlarni ishlab chiqyapman, shunda test tayyorgarligi samarali, qulay va har bir talabaga kamroq stress bilan bo‘lsin. Mening maqsadim oddiy: talabalarga eng yaxshi natijaga erishishga va o‘quv maqsadlariga ishonch bilan erishishga yordam berish.",
+  "part5": "Kelajakda, men bu sahifani shunchaki o‘quv markazi bo‘lib qolmasligini xohlayman — uni mening yo‘limga ochilgan deraza qilishni istayman. Yo‘lda uchraydigan tajribalarim, darslarim va kashfiyotlarimni bo‘lishaman, shunda siz muvaffaqiyat va o‘sish ortidagi haqiqiy jarayonni ko‘rasiz. Birgalikda bu yo‘lni bosib o‘tamiz, va men har qadamda sizni qo‘llab-quvvatlayman, ilhomlantiraman va tayyorlayman."
+},
     "about": {
     "hey": "Salom, men",
     "name": "Asilbek Makhkamov",

@@ -1,0 +1,124 @@
+.storySection{
+padding: 40px 20px;
+  background:var(--bg);
+}
+
+/* КОНТЕЙНЕР */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* ЗАГОЛОВОК */
+.title{
+  font-size:2.8rem;
+  font-weight:800;
+  text-align:left;
+  margin-bottom:20px;
+  color:var(--text-dark);
+}
+
+/* ROW */
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+gap: 20px;
+  border-radius:24px;
+  background:var(--card);
+  margin-bottom: 20px;
+}
+
+/* REVERSE */
+.reverse{
+  direction:rtl;
+}
+
+.reverse .text,
+.reverse .imageWrapper{
+  direction:ltr;
+}
+
+/* TEXT */
+.text p{
+  font-size:1rem;
+  line-height:1.7;
+  color:var(--text-secondary);
+}
+
+/* IMAGE */
+.imageWrapper{
+  display:flex;
+  justify-content:center;
+}
+
+.image{
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.image:hover{
+  transform:scale(1.03);
+}
+.FullStory{
+    background: var(--card);
+    border-radius: 24px;
+      padding: 40px;
+}
+/* ================= */
+/* 📱 MOBILE */
+/* ================= */
+
+@media(max-width:900px){
+
+  .storySection{
+    padding:16px 8px;
+  }
+
+  .title{
+    font-size:2rem;
+    margin-bottom:10px;
+  }
+
+  .row{
+    grid-template-columns:1fr;
+    gap:30px;
+    margin-bottom:40px;
+
+    padding:24px 16px;
+  border-radius:20px;
+
+    text-align:center;
+  }
+
+  .text p{
+    font-size:.95rem;
+  }
+
+  .image{
+    max-width:300px;
+  }
+}
+
+@media(max-width:360px){
+.FullStory{
+    background: var(--card);
+    border-radius: 24px;
+      padding: 20px 12px;
+}
+  .row{
+    padding:0px;
+    border-radius:16px;
+  }
+
+  .title{
+    font-size:1.6rem;
+  }
+
+  .text p{
+    font-size:.9rem;
+  }
+}

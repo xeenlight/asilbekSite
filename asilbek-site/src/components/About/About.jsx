@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
-import aboutImage from "../../assets/images/asilbekAbout1.png";
+import aboutImage from "../../assets/images/asilbekAbout2.png";
 
 function About() {
   const { t } = useTranslation();
@@ -41,7 +41,7 @@ function About() {
               <p>{t('about.story3')}</p>
             </div>
 
-            <a href="#full-story" className={styles.readMore}>
+            <a href="/about" className={styles.readMore}>
               {t('about.readFull')} →
             </a>
           </div>
