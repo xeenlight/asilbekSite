@@ -167,8 +167,7 @@ function Progress() {
                 {videos.map((video, index) => {
                   const videoId =
                     video.link.split('v=')[1]?.split('&')[0] ||
-                    video.id.split(':').pop();
-
+                    video.something?.split(',')
                   return (
                     <motion.div
                       key={videoId || index}
