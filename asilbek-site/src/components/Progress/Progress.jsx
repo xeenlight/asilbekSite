@@ -6,50 +6,83 @@ import styles from './Progress.module.css';
 
 function Progress() {
   const { t } = useTranslation();
+
   const [videos, setVideos] = useState([]);
+  const [recommended, setRecommended] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // 🔥 ID видео (БЕЗ title)
+  const recommendedVideos = [
+    { id: 'bI3bAl5j9Qg' },
+    { id: 'uMFOSvXz80I' },
+    { id: 'qnzy1Wre4to' },
+  ];
+
   useEffect(() => {
-    const fetchVideos = async () => {
+    const fetchAll = async () => {
       try {
-        // Канал @StopGameRu
         const CHANNEL_ID = 'UCq7JZ8ATgQWeu6sDM1czjhg';
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
-        
-        // Бесплатный публичный парсер RSS → JSON
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
+        // 🔥 1. Получаем последние видео канала
         const response = await fetch(proxyUrl);
         if (!response.ok) throw new Error('Ошибка сети');
 
         const data = await response.json();
 
         if (data.status === 'ok' && data.items) {
-          // Берём последние 6 видео (можно изменить)
-          setVideos(data.items.slice(0, 6));
-        } else {
-          throw new Error('Нет видео в ответе');
+
+          // ❌ убираем рекомендованные из "новых"
+          const filtered = data.items.filter(item => {
+            const id = item.link.split('v=')[1]?.split('&')[0];
+            return !recommendedVideos.some(v => v.id === id);
+          });
+
+          setVideos(filtered.slice(0, 3));
         }
+
+        // 🔥 2. Получаем НАЗВАНИЯ рекомендованных (ВАЖНО)
+        const recWithTitles = await Promise.all(
+          recommendedVideos.map(async (video) => {
+            try {
+              const res = await fetch(
+                `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.id}&format=json`
+              );
+              const json = await res.json();
+
+              return {
+                id: video.id,
+                title: json.title,
+              };
+            } catch {
+              return {
+                id: video.id,
+                title: 'Видео',
+              };
+            }
+          })
+        );
+
+        setRecommended(recWithTitles);
+
       } catch (err) {
-        console.error('Ошибка при загрузке видео:', err);
-        setError('Не удалось загрузить видео. Попробуйте позже.');
+        console.error(err);
+        setError(true);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchVideos();
-
-    // Опционально: обновлять каждые 3 часа (10800000 мс)
-    // const interval = setInterval(fetchVideos, 10800000);
-    // return () => clearInterval(interval);
+    fetchAll();
   }, []);
 
   return (
     <section className={styles.progressSection} id="journey">
       <div className={styles.container}>
-        <motion.h2 
+
+        <motion.h2
           className={styles.mainTitle}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,34 +92,82 @@ function Progress() {
         </motion.h2>
 
         <div className={styles.timeline}>
-          {/* Можно оставить твои старые периоды, а ниже добавить блок с видео */}
-          {/* Или полностью заменить timeline на видео, как в примере ниже */}
+          <div className={styles.timelineItem}>
 
-          {/* Пример: показываем последние видео как отдельный блок */}
-          <motion.div 
-            className={styles.timelineItem}
-            initial={{ opacity: 0, x: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+            {/* 🔥 РЕКОМЕНДОВАННЫЕ */}
+            <h3 className={styles.hRecommend}>
+              {t('progress.recommended')}
+            </h3>
 
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '24px'
+            }}>
+              {recommended.map((video, index) => (
+                <motion.div
+                  key={video.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  style={{
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    background: '#111',
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.3)'
+                  }}
+                >
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                    <iframe
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%'
+                      }}
+                      src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                      title={video.title}
+                      frameBorder="0"
+                      allowFullScreen
+                    />
+                  </div>
+
+                  <div style={{ padding: '12px 16px' }}>
+                    <p style={{
+                      fontWeight: 600,
+                      fontSize: '1.05rem',
+                      color: '#eee'
+                    }}>
+                      {video.title}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* 🔥 НОВЫЕ ВИДЕО */}
+            <h3 className={styles.hRecommend}>
+              {t('progress.latest')}
+            </h3>
 
             {loading ? (
-              <p>Загружаем свежие видео...</p>
+              <p>{t('progress.loading')}</p>
             ) : error ? (
-              <p style={{ color: 'red' }}>{error}</p>
+              <p style={{ color: 'red' }}>{t('progress.error')}</p>
             ) : videos.length === 0 ? (
-              <p>Видео пока не найдены</p>
+              <p>{t('progress.empty')}</p>
             ) : (
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '24px',
-                marginTop: '20px'
+                gap: '24px'
               }}>
                 {videos.map((video, index) => {
-                  // Парсим videoId из ссылки (типичный формат YouTube RSS)
-                  const videoId = video.link.split('v=')[1]?.split('&')[0] || video.id.split(':').pop();
+                  const videoId =
+                    video.link.split('v=')[1]?.split('&')[0] ||
+                    video.id.split(':').pop();
 
                   return (
                     <motion.div
@@ -104,25 +185,31 @@ function Progress() {
                     >
                       <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
                         <iframe
-                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%'
+                          }}
+                          src={`https://www.youtube.com/embed/${videoId}?rel=0`}
                           title={video.title}
                           frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         />
                       </div>
+
                       <div style={{ padding: '12px 16px' }}>
-                        <p style={{ 
-                          fontWeight: 600, 
-                          margin: '0 0 8px 0',
+                        <p style={{
+                          fontWeight: 600,
+                          marginBottom: '8px',
                           fontSize: '1.05rem',
-                          lineHeight: 1.4,
-                          color: '#eee',
+                          color: '#eee'
                         }}>
                           {video.title}
                         </p>
-                        <small style={{ color: '#aaa', display: 'block' }}>
+
+                        <small style={{ color: '#aaa' }}>
                           {new Date(video.pubDate).toLocaleDateString('ru-RU', {
                             day: 'numeric',
                             month: 'long',
@@ -135,11 +222,8 @@ function Progress() {
                 })}
               </div>
             )}
-          </motion.div>
 
-          {/* Если хочешь — верни сюда свои старые периоды 2020–2023 и 2024–2025 */}
-          {/* ... твои оригинальные timeline.map(...) ... */}
-
+          </div>
         </div>
       </div>
     </section>

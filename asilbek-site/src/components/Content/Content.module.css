@@ -108,6 +108,12 @@ h3{
   color:var(--text-secondary);
   margin-bottom:26px;
 }
+.card:hover .pCon{
+  font-size:1.1rem;
+  line-height:1.6;
+  color:var(--text-dark);
+  margin-bottom:26px;
+}
 
 .link{
   font-size:1.05rem;
@@ -137,7 +143,11 @@ h3{
       "more";
     grid-template-rows:auto;
   }
-
+.youtube{ grid-row:span 2; }
+.productivity{ grid-row:span 2; }
+.business{ grid-row:span 2; }
+.grades{ grid-row:span 2; }
+.more{ grid-row:span 2; }
   .title{
     font-size:3rem;
   }
