@@ -26,7 +26,7 @@ return(
 </p>
 
 <div className={styles.socials}>
-<div className={styles.social}>
+<div  className={styles.social}>
     <img src={inst} alt="Instagram" />
 </div>
 <div className={styles.social}>

@@ -21,7 +21,7 @@ function SubscribeTG() {
           transition={{ duration: 0.6 }}
         >
           <div className={styles.photoWrapper}>
-            <img src={asilbek} alt="Asilbek" className={styles.photo} />
+
           </div>
         </motion.div>
 

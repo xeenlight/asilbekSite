@@ -17,7 +17,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  margin-bottom: 60px;
 }
 
 /* TITLE */
@@ -95,11 +94,21 @@
 
 /* разные фоны */
 .image1 {
-  background-image: url('../../assets/images/asilbekMain2.png');
+  background-image: url('../../assets/images/asilbekAbout3.png');
+    background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 👇 вот тут магия */
+background-position: 10% 0;
 }
 
 .image2 {
-  background-image: url('../../assets/images/asilbekMain2.png');
+  background-image: url('../../assets/images/asilbekAbout3.png');
+    background-size: cover;
+  background-repeat: no-repeat;
+
+  /* 👇 вот тут магия */
+background-position: 10% 0;
 }
 
 .imageSide img {
