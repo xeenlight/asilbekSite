@@ -1,0 +1,149 @@
+.section {
+  padding: 40px 20px;
+}
+
+/* 🔥 ОБЩИЙ КОНТЕЙНЕР */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 40px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+/* GRID */
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+/* TITLE */
+.title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+/* VIDEO */
+.videoSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.videoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* КАРТОЧКА */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* PLAYER */
+.player {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.player iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* INFO */
+.info {
+  padding: 12px 16px;
+  color: #eee;
+}
+
+.info p {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.info small {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* IMAGE */
+.imageSide {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* разные фоны */
+.image1 {
+  background-image: url('../../assets/images/asilbekMain2.png');
+}
+
+.image2 {
+  background-image: url('../../assets/images/asilbekMain2.png');
+}
+
+.imageSide img {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .wrapper {
+    padding: 20px 14px;
+  }
+
+  .block {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* 🔥 ВАЖНО: порядок */
+  .image1 {
+    order: 1;
+    background: none;
+  }
+
+  .block:first-child .videoSide {
+    order: 2;
+  }
+
+  .image2 {
+    order: 3;
+    background: none;
+  }
+
+  .block:last-child .videoSide {
+    order: 4;
+  }
+
+  .imageSide img {
+    display: block;
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+  }
+}

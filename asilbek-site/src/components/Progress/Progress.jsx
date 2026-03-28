@@ -22,7 +22,7 @@ function Progress() {
   useEffect(() => {
     const fetchAll = async () => {
       try {
-        const CHANNEL_ID = 'UCq7JZ8ATgQWeu6sDM1czjhg';
+        const CHANNEL_ID = 'UCq3PlGB0_e6jTc9Jr2Al7LQ';
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 

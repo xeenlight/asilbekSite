@@ -98,3 +98,37 @@ gap:40px;
 }
 
 }
+.social{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.05);
+  transition:.3s;
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden; /* ВАЖНО */
+}
+.social img{
+  width:20px;
+  height:20px;
+  filter: invert(51%) sepia(150%) saturate(749%) hue-rotate(180deg);
+  transition:.3s;
+}
+
+.social:hover img{
+  filter: invert(100%);
+}
+.icon{
+  width:20px;
+  height:20px;
+  fill:#4da6ff;
+  transition:.3s;
+}
+
+.social:hover .icon{
+  fill:#fff;
+}
