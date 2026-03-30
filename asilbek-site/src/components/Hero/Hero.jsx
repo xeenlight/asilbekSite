@@ -3,16 +3,12 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./Hero.module.css";
-import bgImage from "../../assets/images/asilbekMain2Big.png";
 
 function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section
-      className={styles.hero}
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+<section className={styles.hero}>
       {/* OVERLAY затемнение */}
       <div className={styles.overlay}></div>
 

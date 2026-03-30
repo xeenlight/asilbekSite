@@ -7,17 +7,13 @@
 
   padding: 60px clamp(10px, 35vw - 300px, 390px);
 
-  /* 🔥 ФОН (управляемый) */
-  --bg-x: 50%;
-  --bg-y: 20%;
-  --bg-size: cover;
-
-  background-size: var(--bg-size);
-  background-position: var(--bg-x) var(--bg-y);
-  background-repeat: no-repeat;
 
   overflow: hidden;
  height: clamp(550px, 18.75vw + 490px, 850px);
+   background-image: url("../../assets/images/asilbekMain2Big.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* по умолчанию ничего нет */
@@ -116,26 +112,36 @@ z-index: 3;
 /* 📱 MOBILE */
 /* ========================= */
 
+
+
 @media (max-width: 900px) {
-
   .hero {
-    padding: 40px 16px;
+    background-image: url("../../assets/images/asilbekMainPhone.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-    /* можно отдельно двигать фон */
-    --bg-x: 0%;
+    padding: 40px 16px;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
   }
- .hero::before {
-background: linear-gradient(
-  to top,
-  rgba(0,0,0,1) 0%,
-  rgba(0,0,0,0.85) 25%,
-  rgba(0,0,0,0.5) 50%,
-  transparent 75%
-);
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.65) 25%,
+      rgba(0,0,0,0.1) 50%,
+      transparent 75%
+    );
   }
+
   .content {
     text-align: center;
     justify-items: center;
@@ -154,13 +160,10 @@ background: linear-gradient(
   }
 }
 
+/* 👇 НИЧЕГО НЕ ТРОГАЕМ У ФОНА */
 @media (max-width: 650px) {
-
   .hero {
     padding: 20px 10px;
-
-    /* ещё ниже для маленьких экранов */
-    --bg-x: 20%;
   }
 
   .title {
@@ -175,34 +178,31 @@ background: linear-gradient(
     font-size: 0.9rem;
   }
 }
-@media (max-width: 430px) {
 
+/* 👇 НИЧЕГО НЕ ТРОГАЕМ У ФОНА */
+@media (max-width: 430px) {
   .hero {
     padding: 20px 10px;
     height: 600px;
 
-
-    /* ещё ниже для маленьких экранов */
-    --bg-x: 31%;
-      --bg-size: 250%;
-
-  background-size: var(--bg-size);
-  background-position: var(--bg-x) var(--bg-y);
-  background-repeat: no-repeat;
-  background-color: #000;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
   }
+
   .content {
     text-align: center;
     justify-items: center;
     gap: 5px;
   }
-  .title {
 
+  .title {
     font-size: 1.6rem;
   }
 
   .hey {
-        margin-top: 400px;
+    margin-top: 400px;
     font-size: 1rem;
   }
 
