@@ -76,7 +76,7 @@
   }
 },
 "help": {
-  "title": "How I Can Help You",
+  "title": "How I Can Help<circle>You?</circle>",
   "getStarted": "Get Started",
   "cards": {
     "productivity": {

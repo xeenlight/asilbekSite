@@ -74,7 +74,7 @@
   }
 },
 "help": {
-  "title": "Men sizga qanday yordam bera olaman",
+  "title": "Men <circle>sizga</circle> qanday yordam bera olaman?",
   "getStarted": "Boshlash",
   "cards": {
     "productivity": {
