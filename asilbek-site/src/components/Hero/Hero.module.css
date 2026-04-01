@@ -126,7 +126,6 @@ z-index: 3;
 /* ========================= */
 
 
-
 @media (max-width: 900px) {
   .hero {
     background-image: url("../../assets/images/asilbekMainPhone.png");
@@ -162,14 +161,14 @@ z-index: 3;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.35rem;        /* было 2rem → +0.35 */
     line-height: 1.2;
     max-width: 100%;
   }
 
   .intro {
     max-width: 100%;
-    font-size: 0.95rem;
+    font-size: 1.3rem;         /* было 0.95rem → +0.35 */
   }
 }
 
@@ -180,15 +179,15 @@ z-index: 3;
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 1.95rem;        /* было 1.6rem → +0.35 */
   }
 
   .hey {
-    font-size: 1rem;
+    font-size: 1.35rem;        /* было 1rem → +0.35 */
   }
 
   .intro {
-    font-size: 0.9rem;
+    font-size: 1.25rem;        /* было 0.9rem → +0.35 */
   }
 }
 
@@ -211,15 +210,15 @@ z-index: 3;
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 1.95rem;        /* было 1.6rem → +0.35 */
   }
 
   .hey {
     margin-top: 400px;
-    font-size: 1rem;
+    font-size: 1.35rem;        /* было 1rem → +0.35 */
   }
 
   .intro {
-    font-size: 0.9rem;
+    font-size: 1.25rem;        /* было 0.9rem → +0.35 */
   }
 }

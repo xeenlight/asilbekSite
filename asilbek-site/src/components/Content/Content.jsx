@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import styles from "./Content.module.css";
 
 function Content() {
@@ -11,12 +11,17 @@ function Content() {
 
         <div className={styles.grid}>
 
-          {/* TITLE */}
-          <div className={styles.titleBox}>
-            <h2 className={styles.title}>
-              {t("help.title")} <span className={styles.title}>?</span>
-            </h2>
-          </div>
+{/* TITLE */}
+<div className={styles.titleBox}>
+  <h2 className={styles.title}>
+    <Trans
+      i18nKey="help.title"
+      components={{
+        circle: <span className={styles.handCircle} />,
+      }}
+    />
+  </h2>
+</div>
 
           {/* YOUTUBE BIG */}
           <motion.div
