@@ -1,29 +1,27 @@
 {
 "nav": {
-  "home": "Главная",
-  "about": "Обо мне",
-  "content": "Контент"
+  "home": "Asosiy",
+  "about": "Men haqimda",
+  "content": "Kontent"
 },
   "hero": {
     "hey": "Salom do’stlar",
     "title": "Men Asilbekman",
-    "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. Mening shaxsiy natijam 8.5, va 1 000 dan ortiq talaba men bilan o‘qib, o’z maqsadlariga erishgan, ularning 100+ nafari 7+ qo‘lga kiritgan.",
+    "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. <highlight>Mening shaxsiy natijam 8.5</highlight>, va <highlight>1 000 dan ortiq talaba</highlight> men bilan o‘qib, o’z maqsadlariga erishgan,<highlight> ularning 100+ nafari 7+ qo‘lga kiritgan</highlight>.",
     "subscribeTitle": "Подпишись на мой Telegram-канал",
     "subscribeText": "Получай ежедневные советы по английскому, разборы сложных тем, мотивацию и полезные материалы прямо в телефон. Всё бесплатно.",
     "telegramPlaceholder": "Твой @username в Telegram",
     "subscribeButton": "Подписаться на канал",
     "note": "Нажимая кнопку, ты соглашаешься получать сообщения от канала. Отписаться можно в любой момент."
   },
-    "subscribe": {
-    "title": {
-      "part1": "qo‘shiling",
-      "accent": "ELTS Delivered’ga"
-    },
-    "subtitle": "Tez rivojlanayotgan onlayn hamjamiyatning bir qismiga aylaning va IELTS bo‘yicha muntazam foydali ma’lumotlarni oling. Har kuni men amaliy IELTS maslahatlari, sinalgan tayyorgarlik usullari va imtihon kuni uchun strategiyalarni ulashaman — eng yaxshi natijaga erishishingiz uchun, bepul va har doim shunday bo‘ladi.",
-    "button": "Telegram-ga o'tish",
-"reviews": "200+ sharhlar",
-"note": "Siz istalgan vaqtda obunani bekor qilish tugmasini bosib chiqishingiz mumkin"
-  },
+"subscribe": {
+  "title": "Qo‘shiling <accent>ELTS Delivered’ga </accent>",
+  
+  "subtitle": "Tez rivojlanayotgan onlayn hamjamiyatning bir qismiga aylaning va IELTS bo‘yicha muntazam foydali ma’lumotlarni oling. Har kuni men amaliy IELTS maslahatlari, sinalgan tayyorgarlik usullari va imtihon kuni uchun strategiyalarni ulashaman — eng yaxshi natijaga erishishingiz uchun, bepul va har doim shunday bo‘ladi.",
+  "button": "Telegram-ga o'tish",
+  "reviews": "200+ sharhlar",
+  "note": "Siz istalgan vaqtda obunani bekor qilish tugmasini bosib chiqishingiz mumkin"
+},
     "story": {
   "title": "Mening hikoyam",
   "part1": "Salom, men Asilbek Makhkamov, va mening ishtiyoqim – talabalarni imtihonlarda muvaffaqiyatga erishishlariga ishonch bilan yordam berish. Mening ta’lim yo‘lim erta boshlangan — men doimo qiziquvchan va motivatsiyalangan edim, va aslida ko‘pchilik tengdoshlarimdan ikki yil oldin maktabni boshladim. Yo‘l davomida o‘rganib olgan bir nechta samarali o‘quv strategiyalari tufayli men doimo a’lo natijalar bilan o‘qib, maktabni qizil attestat bilan tugatdim.",
@@ -45,6 +43,65 @@
             "watchVideos": "Videolarni ko‘rish",
     "readArticles": "Maqolalarni o‘qing",
     "readBook": "Kitoblarni o‘qing / Kurs"
+  },
+  "footer": {
+  "logo": "Asilbek IELTS",
+  "copy": "© Asilbek IELTS 2026. Barcha huquqlar himoyalangan.",
+
+  "columns": {
+    "more": {
+      "title": "Yana",
+      "about": "Men haqimda",
+      "jobs": "Kontent",
+      "contact": "Threads",
+      "account": "Mening Instagramim"
+    },
+
+    "content": {
+      "title": "Bepul kontent",
+      "newsletter": "Rasmiy xat",
+      "articles": "Maqolalar va qo‘llanmalar",
+      "podcast": "Podcast",
+      "videos": "Videolar",
+      "notes": "Kitoblar bo‘yicha eslatmalar"
+    },
+
+    "products": {
+      "title": "Mahsulotlar",
+      "book": "Mening kitobim",
+      "academy": "YouTube Akademiyasi"
+    }
   }
+},
+"help": {
+  "title": "Men sizga qanday yordam bera olaman",
+  "getStarted": "Boshlash",
+  "cards": {
+    "productivity": {
+      "title": "Productivroq bo‘ling",
+      "desc": "Vaqtni boshqarish, maqsadlarga erishish va jarayondan zavq olishni o‘rganing."
+    },
+    "youtube": {
+      "title": "YouTube kanalingizni rivojlantiring",
+      "desc": "Hayotni o‘zgartiradigan kanalni qanday boshlash va o‘stirish — ko‘p yillik tajribaga asoslangan."
+    },
+    "business": {
+      "title": "Onlayn biznes quring",
+      "desc": "Ozodlik, zavq va daromad beradigan biznesni ishga tushiring va kengaytiring."
+    },
+    "grades": {
+      "title": "Baholaringizni ko‘taring",
+      "desc": "Imtihonlar uchun isbotlangan samarali o‘qish usullari."
+    }
+  }
+},
+"progress": {
+  "title": "Mening yo‘lim",
+  "recommended": "Ko‘rishni maslahat beraman",
+  "latest": "Eng yangi videolar",
+  "loading": "Eng yangi videolarni yuklayapmiz...",
+  "error": "Videolarni yuklab bo‘lmadi. Birozdan keyin yana urinib ko‘ring.",
+  "empty": "Hali videolar yo‘q"
+}
   
 }

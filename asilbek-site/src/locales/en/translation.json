@@ -1,13 +1,13 @@
 {
 "nav": {
-  "home": "Главная",
-  "about": "Обо мне",
-  "content": "Контент"
+  "home": "Home",
+  "about": "About me",
+  "content": "Content"
 },
   "hero": {
     "hey": "Hey friends",
     "title": "I’m Asilbek",
-    "intro": "I’ve been helping students prepare for IELTS for over 5 years. My band score is 8.5, and more than 1,000 students have studied with me and achieved their educational goals, including 100+ who scored 7+.",
+    "intro": "I’ve been helping students prepare for IELTS for over 5 years. <highlight>My band score is 8.5</highlight>, and more than <highlight>1,000 students</highlight> have studied with me and achieved their educational goals, <highlight>including 100+ who scored 7+.</highlight>",
     
     
     "subscribeTitle": "Подпишись на мой Telegram-канал",
@@ -25,10 +25,8 @@
   "part5": "Looking ahead, I want this page to be more than just a hub for learning—I want it to be a window into my journey. I’ll share the experiences, lessons, and discoveries I encounter along the way, so you can see exactly what goes into building success and growth. Together, we’ll navigate this path, and I’ll make sure you’re fully prepared, inspired, and supported every step of the way."
 },
     "subscribe": {
-    "title": {
-      "part1": "Join",
-      "accent": "IELTS Delivered"
-    },
+
+          "title": "Join <accent>IELTS Delivered</accent>",
     "subtitle": "Become a part of a fast-growing online community and receive regular IELTS insights. Every day, I share actionable IELTS tips, proven preparation methods, and test-day strategies to help you perform at your best — free, and always will be.",
     "button": "Go to Telegram",
     "reviews": "200+ reviews",
@@ -47,7 +45,65 @@
             "watchVideos": "Watch Videos",
     "readArticles": "Read Articles",
     "readBook": "Read Book / Course"
+  },
+  "footer": {
+  "logo": "Asilbek IELTS",
+  "copy": "© Asilbek IELTS 2026. All rights reserved.",
+
+  "columns": {
+    "more": {
+      "title": "More",
+      "about": "About me",
+      "jobs": "Content",
+      "contact": "Threads",
+      "account": "My Instagram"
+    },
+
+    "content": {
+      "title": "Free Content",
+      "newsletter": "Newsletter",
+      "articles": "Articles & Guides",
+      "podcast": "Podcast",
+      "videos": "Videos",
+      "notes": "Book Notes"
+    },
+
+    "products": {
+      "title": "Products",
+      "book": "My Book",
+      "academy": "YouTube Academy"
+    }
   }
-  
+},
+"help": {
+  "title": "How I Can Help You",
+  "getStarted": "Get Started",
+  "cards": {
+    "productivity": {
+      "title": "Become More Productive",
+      "desc": "Learn how to manage your time, achieve goals, and enjoy the process."
+    },
+    "youtube": {
+      "title": "Grow Your YouTube Channel",
+      "desc": "How to launch and grow a channel that changes lives — based on years of real experience."
+    },
+    "business": {
+      "title": "Build an Online Business",
+      "desc": "Launch and scale a business that gives you freedom, pleasure, and income."
+    },
+    "grades": {
+      "title": "Improve Your Grades",
+      "desc": "Effective study methods for exams based on proven techniques."
+    }
+  }
+},
+  "progress": {
+  "title": "My Journey",
+  "recommended": "Recommended to watch",
+  "latest": "Latest videos",
+  "loading": "Loading latest videos...",
+  "error": "Failed to load videos. Please try again later.",
+  "empty": "No videos found yet"
+}
   
 }

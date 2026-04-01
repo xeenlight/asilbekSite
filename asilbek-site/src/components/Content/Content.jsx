@@ -14,7 +14,7 @@ function Content() {
           {/* TITLE */}
           <div className={styles.titleBox}>
             <h2 className={styles.title}>
-              {t("help.title")} <span className={styles.accent}>?</span>
+              {t("help.title")} <span className={styles.title}>?</span>
             </h2>
           </div>
 

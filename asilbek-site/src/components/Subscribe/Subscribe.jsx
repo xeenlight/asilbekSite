@@ -142,7 +142,6 @@ return(
       target="_blank"
       rel="noopener noreferrer"
     >
-      {t("footer.columns.products.lifeos")}
     </a>
   </div>
 

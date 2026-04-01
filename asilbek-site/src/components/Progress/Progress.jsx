@@ -19,64 +19,65 @@ function Progress() {
     { id: 'qnzy1Wre4to' },
   ];
 
-  useEffect(() => {
-    const fetchAll = async () => {
-      try {
-        const CHANNEL_ID = 'UCq3PlGB0_e6jTc9Jr2Al7LQ';
-        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
-        const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+useEffect(() => {
+  const fetchAll = async () => {
 
-        // 🔥 1. Получаем последние видео канала
-        const response = await fetch(proxyUrl);
-        if (!response.ok) throw new Error('Ошибка сети');
+    // 🔥 1. РЕКОМЕНДОВАННЫЕ (НЕЗАВИСИМО)
+    try {
+      const recWithTitles = await Promise.all(
+        recommendedVideos.map(async (video) => {
+          try {
+            const res = await fetch(
+              `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.id}&format=json`
+            );
+            const json = await res.json();
 
-        const data = await response.json();
+            return {
+              id: video.id,
+              title: json.title,
+            };
+          } catch {
+            return {
+              id: video.id,
+              title: 'Видео',
+            };
+          }
+        })
+      );
 
-        if (data.status === 'ok' && data.items) {
+      setRecommended(recWithTitles);
+    } catch (e) {
+      console.error("Ошибка recommended", e);
+    }
 
-          // ❌ убираем рекомендованные из "новых"
-          const filtered = data.items.filter(item => {
-            const id = item.link.split('v=')[1]?.split('&')[0];
-            return !recommendedVideos.some(v => v.id === id);
-          });
+    // 🔥 2. НОВЫЕ ВИДЕО (отдельно)
+    try {
+      const CHANNEL_ID = 'UCq3PlGB0_e6jTc9Jr2Al7LQ';
+      const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+      const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
-          setVideos(filtered.slice(0, 3));
-        }
+      const response = await fetch(proxyUrl);
+      const data = await response.json();
 
-        // 🔥 2. Получаем НАЗВАНИЯ рекомендованных (ВАЖНО)
-        const recWithTitles = await Promise.all(
-          recommendedVideos.map(async (video) => {
-            try {
-              const res = await fetch(
-                `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.id}&format=json`
-              );
-              const json = await res.json();
+      if (data.items) {
+        const filtered = data.items.filter(item => {
+          const id = item.link.split('v=')[1]?.split('&')[0];
+          return !recommendedVideos.some(v => v.id === id);
+        });
 
-              return {
-                id: video.id,
-                title: json.title,
-              };
-            } catch {
-              return {
-                id: video.id,
-                title: 'Видео',
-              };
-            }
-          })
-        );
-
-        setRecommended(recWithTitles);
-
-      } catch (err) {
-        console.error(err);
-        setError(true);
-      } finally {
-        setLoading(false);
+        setVideos(filtered.slice(0, 3));
       }
-    };
 
-    fetchAll();
-  }, []);
+    } catch (err) {
+      console.error("Ошибка RSS", err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchAll();
+}, []);
 
   return (
     <section className={styles.progressSection} id="journey">

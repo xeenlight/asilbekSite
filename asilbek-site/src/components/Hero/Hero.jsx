@@ -1,15 +1,14 @@
-// src/components/Hero/Hero.jsx
-
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import styles from "./Hero.module.css";
 
 function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const isUzbek = i18n.language === 'uz' || i18n.language.startsWith('uz');
 
   return (
-<section className={styles.hero}>
-      {/* OVERLAY затемнение */}
+    <section className={styles.hero}>
       <div className={styles.overlay}></div>
 
       <motion.div
@@ -22,12 +21,19 @@ function Hero() {
           {t("hero.hey")} <span className={styles.wave}>👋</span>
         </h2>
 
-        <h1 className={styles.title}>
+        <h1 
+          className={`${styles.title} ${isUzbek ? styles.titleSmall : ''}`}
+        >
           {t("hero.title")}
         </h1>
 
         <p className={styles.intro}>
-          {t("hero.intro")}
+          <Trans
+            i18nKey="hero.intro"
+            components={{
+              highlight: <span className={styles.highlight} />,
+            }}
+          />
         </p>
       </motion.div>
     </section>

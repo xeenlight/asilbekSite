@@ -1,9 +1,8 @@
 // src/components/SubscribeTG/SubscribeTG.jsx
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 import styles from "./SubscribeTG.module.css";
 import qr from "../../assets/images/qr.png"; 
-
+import { useTranslation, Trans } from "react-i18next";
 function SubscribeTG() {
   const { t } = useTranslation();
 
@@ -13,12 +12,14 @@ function SubscribeTG() {
 
         {/* LEFT */}
         <div className={styles.left}>
-          <h2 className={styles.title}>
-            {t("subscribe.title.part1")}{" "}
-            <span className={styles.accent}>
-              {t("subscribe.title.accent")}
-            </span>
-          </h2>
+<h2 className={styles.title}>
+  <Trans
+    i18nKey="subscribe.title"
+    components={{
+      accent: <span className={styles.accent} />,
+    }}
+  />
+</h2>
 
           <p className={styles.subtitle}>
             {t("subscribe.subtitle")}

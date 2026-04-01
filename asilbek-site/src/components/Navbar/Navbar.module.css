@@ -126,7 +126,10 @@
   background:var(--accent);
   color:#fff;
 }
-
+.active:hover{
+  background:var(--accent);
+  color:#fff;
+}
 /* BURGER */
 .burger{
   display:none;

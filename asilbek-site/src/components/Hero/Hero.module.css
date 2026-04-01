@@ -15,7 +15,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.highlight {
+  color: var(--accent);           /* золотой / ярко-жёлтый — красиво смотрится */
+  font-weight: 400;         /* жирный */
+  /* Можно добавить: */
+border-bottom: 2px solid var(--accent); /* #ffd700; 
+  /* background: linear-gradient(...); */
+  padding: 0px 0px;
+  border-radius: 4px;
+}
 /* по умолчанию ничего нет */
 .hero::before {
   content: "";
@@ -95,6 +103,11 @@ z-index: 3;
   color: #fff;
 }
 
+
+
+.titleSmall {
+  font-size: 4.7rem !important;
+}
 .intro {
   font-size: 1.75rem;
   color: #ddd;
