@@ -23,6 +23,8 @@ border-bottom: 2px solid var(--accent); /* #ffd700;
   /* background: linear-gradient(...); */
   padding: 0px 0px;
   border-radius: 4px;
+  white-space: nowrap;
+  vertical-align: baseline;
 }
 /* по умолчанию ничего нет */
 .hero::before {
