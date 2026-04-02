@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
 }
 .highlight {
-  color: var(--accent);           /* золотой / ярко-жёлтый — красиво смотрится */
+  /*color: var(--accent);            золотой / ярко-жёлтый — красиво смотрится */
   font-weight: 400;         /* жирный */
   /* Можно добавить: */
 border-bottom: 2px solid var(--accent); /* #ffd700; 
@@ -108,7 +108,7 @@ z-index: 3;
 
 
 .titleSmall {
-  font-size: 1.95rem !important;
+  font-size: 4.6rem !important;
 }
 .intro {
   font-size: 1.75rem;
@@ -140,7 +140,9 @@ z-index: 3;
     justify-content: center;
     align-items: flex-end;
   }
-
+.titleSmall {
+  font-size: 2.35rem !important;
+}
   .hero::before {
     content: "";
     position: absolute;
@@ -167,7 +169,9 @@ z-index: 3;
     line-height: 1.2;
     max-width: 100%;
   }
-
+.titleSmall {
+  font-size: 2.35rem !important;
+}
   .intro {
     max-width: 100%;
     font-size: 1.3rem;         /* было 0.95rem → +0.35 */
@@ -214,7 +218,9 @@ z-index: 3;
   .title {
     font-size: 1.95rem;        /* было 1.6rem → +0.35 */
   }
-
+.titleSmall {
+  font-size: 1.95rem !important;
+}
   .hey {
     margin-top: 400px;
     font-size: 1.35rem;        /* было 1rem → +0.35 */
