@@ -125,8 +125,13 @@
   background:rgba(0,128,255,.2);
 }
 
-.icon{
-  width:36px;
+.icon {
+  width: 36px;
+  height: 36px;           /* добавляем высоту для лучшего контроля */
+  filter: brightness(0) saturate(100%) invert(58%) sepia(96%) saturate(748%) hue-rotate(168deg) brightness(92%) contrast(92%);
+  /* Этот фильтр переводит иконку в цвет var(--accent) */
+  
+  transition: filter 0.3s ease;   /* плавное изменение цвета при hover (по желанию) */
 }
 
 /* TEXT */

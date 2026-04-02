@@ -76,24 +76,20 @@
   }
 },
 "help": {
-  "title": "How I Can Help<circle>You?</circle>",
+  "title": "How can I help <circle>you?</circle>",
   "getStarted": "Get Started",
   "cards": {
     "productivity": {
-      "title": "Become More Productive",
-      "desc": "Learn how to manage your time, achieve goals, and enjoy the process."
+      "title": "Free YouTube",
+      "desc": "Proven growth strategies tested on hundreds of students, step-by-step channel development methods, real case studies, and insights from those who have already achieved results"
     },
     "youtube": {
-      "title": "Grow Your YouTube Channel",
-      "desc": "How to launch and grow a channel that changes lives — based on years of real experience."
+      "title": "Offline Classes",
+      "desc": "Personalized approach for each student, lessons starting from 2 hours with deep immersion, structured preparation, and development of strong academic English skills"
     },
     "business": {
-      "title": "Build an Online Business",
-      "desc": "Launch and scale a business that gives you freedom, pleasure, and income."
-    },
-    "grades": {
-      "title": "Improve Your Grades",
-      "desc": "Effective study methods for exams based on proven techniques."
+      "title": "Private Club B9Lab",
+      "desc": "Full access to a library of recorded lessons, exclusive streams, detailed homework reviews, as well as personal recommendations and continuous support at every stage"
     }
   }
 },

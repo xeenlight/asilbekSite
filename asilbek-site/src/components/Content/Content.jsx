@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
 import styles from "./Content.module.css";
-
+import IconTg from "../../assets/images/IconTg.png";
+import IconYT from "../../assets/images/IconYT.png";
+import IconOff from "../../assets/images/IconOff.png";
 function Content() {
   const { t } = useTranslation();
 
@@ -11,17 +13,17 @@ function Content() {
 
         <div className={styles.grid}>
 
-{/* TITLE */}
-<div className={styles.titleBox}>
-  <h2 className={styles.title}>
-    <Trans
-      i18nKey="help.title"
-      components={{
-        circle: <span className={styles.handCircle} />,
-      }}
-    />
-  </h2>
-</div>
+          {/* TITLE */}
+          <div className={styles.titleBox}>
+            <h2 className={styles.title}>
+              <Trans
+                i18nKey="help.title"
+                components={{
+                  circle: <span className={styles.handCircle} />,
+                }}
+              />
+            </h2>
+          </div>
 
           {/* YOUTUBE BIG */}
           <motion.div
@@ -29,14 +31,16 @@ function Content() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .7 }}
+            transition={{ duration: 0.7 }}
           >
             <div className={styles.iconWrapper}>
-              <img src="/assets/icons/laptop-play.svg" className={styles.icon}/>
+              <img src={IconOff} className={styles.icon} alt="Offline Classes" />
             </div>
 
             <h3>{t("help.cards.youtube.title")}</h3>
-            <p className={styles.pCon}> {t("help.cards.youtube.desc")}</p>
+            <p className={styles.pCon}>
+              {t("help.cards.youtube.desc")}
+            </p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
@@ -49,14 +53,16 @@ function Content() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .7, delay:.1 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
           >
             <div className={styles.iconWrapper}>
-              <img src="/assets/icons/youtube-play.svg" className={styles.icon}/>
+              <img src={IconYT} className={styles.icon} alt="YouTube" />
             </div>
 
             <h3>{t("help.cards.productivity.title")}</h3>
-            <p className={styles.pCon}>{t("help.cards.productivity.desc")}</p>
+            <p className={styles.pCon}>
+              {t("help.cards.productivity.desc")}
+            </p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
@@ -69,55 +75,21 @@ function Content() {
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .7, delay:.2 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className={styles.iconWrapper}>
-              <img src="/assets/icons/money-bag.svg" className={styles.icon}/>
+              <img src={IconTg} className={styles.icon} alt="B9Lab" />
             </div>
 
             <h3>{t("help.cards.business.title")}</h3>
-            <p className={styles.pCon}>{t("help.cards.business.desc")}</p>
+            <p className={styles.pCon}>
+              {t("help.cards.business.desc")}
+            </p>
 
             <a href="#" className={styles.link}>
               {t("help.getStarted")} →
             </a>
           </motion.div>
-
-          {/* GRADES */}
-          <motion.div
-            className={`${styles.card} ${styles.grades}`}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: .7, delay:.3 }}
-          >
-            <div className={styles.iconWrapper}>
-              <img src="/assets/icons/notebook.svg" className={styles.icon}/>
-            </div>
-
-            <h3>{t("help.cards.grades.title")}</h3>
-            <p className={styles.pCon}>{t("help.cards.grades.desc")}</p>
-
-            <a href="#" className={styles.link}>
-              {t("help.getStarted")} →
-            </a>
-          </motion.div>
-
-          {/* MORE */}
-          <motion.div
-            className={`${styles.card} ${styles.more}`}
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: .7, delay:.4 }}
-          >
-            <h3>...and more!</h3>
-
-            <a href="#" className={styles.link}>
-              Explore all content →
-            </a>
-          </motion.div>
-
         </div>
 
       </div>

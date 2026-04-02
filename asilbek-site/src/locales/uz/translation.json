@@ -74,24 +74,20 @@
   }
 },
 "help": {
-  "title": "Men <circle>sizga</circle> qanday yordam bera olaman?",
+  "title": "Men sizga qanday yordam bera olaman <circle>?</circle>",
   "getStarted": "Boshlash",
   "cards": {
     "productivity": {
-      "title": "Productivroq bo‘ling",
-      "desc": "Vaqtni boshqarish, maqsadlarga erishish va jarayondan zavq olishni o‘rganing."
+      "title": "Bepul YouTube",
+      "desc": "Yuzlab o‘quvchilarda sinovdan o‘tgan samarali rivojlanish usullari, kanalni o‘stirish bo‘yicha bosqichma-bosqich strategiyalar, real кейслар таҳлили ва натижага эришганлардан маслаҳатлар"
     },
     "youtube": {
-      "title": "YouTube kanalingizni rivojlantiring",
-      "desc": "Hayotni o‘zgartiradigan kanalni qanday boshlash va o‘stirish — ko‘p yillik tajribaga asoslangan."
+      "title": "Offline darslar",
+      "desc": "Har bir o‘quvchi uchun individual yondashuv, 2 soatdan boshlab chuqur darslar, tizimli tayyorgarlik va akademik ingliz tilini yuqori darajaga olib chiqish"
     },
     "business": {
-      "title": "Onlayn biznes quring",
-      "desc": "Ozodlik, zavq va daromad beradigan biznesni ishga tushiring va kengaytiring."
-    },
-    "grades": {
-      "title": "Baholaringizni ko‘taring",
-      "desc": "Imtihonlar uchun isbotlangan samarali o‘qish usullari."
+      "title": "Yopiq klub B9Lab",
+      "desc": "Yozib olingan darslar kutubxonasiga to‘liq kirish, yopiq strimlar, uy vazifalarining batafsil tahlili, shuningdek har bir bosqichda shaxsiy tavsiyalar va doimiy qo‘llab-quvvatlash"
     }
   }
 },
