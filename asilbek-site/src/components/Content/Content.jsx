@@ -42,7 +42,7 @@ function Content() {
               {t("help.cards.youtube.desc")}
             </p>
 
-            <a href="#" className={styles.link}>
+            <a href="" className={styles.link}  target="_blank" rel="noopener noreferrer">
               {t("help.getStarted")} →
             </a>
           </motion.div>
@@ -64,7 +64,7 @@ function Content() {
               {t("help.cards.productivity.desc")}
             </p>
 
-            <a href="#" className={styles.link}>
+            <a href="https://www.youtube.com/@asilbekielts" className={styles.link} target="_blank" rel="noopener noreferrer">
               {t("help.getStarted")} →
             </a>
           </motion.div>
@@ -86,7 +86,7 @@ function Content() {
               {t("help.cards.business.desc")}
             </p>
 
-            <a href="#" className={styles.link}>
+            <a href="https://t.me/ieltsdelivered" className={styles.link} target="_blank" rel="noopener noreferrer">
               {t("help.getStarted")} →
             </a>
           </motion.div>

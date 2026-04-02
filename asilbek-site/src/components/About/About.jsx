@@ -51,17 +51,34 @@ function About() {
       </motion.div>
 
       {/* CTA */}
-      <div className={styles.cta}>
-        <button className={styles.ctaButton}>
-          {t('about.watchVideos')}
-        </button>
-        <button className={styles.ctaButton}>
-          {t('about.readArticles')}
-        </button>
-        <button className={styles.ctaButton}>
-          {t('about.readBook')}
-        </button>
-      </div>
+<div className={styles.cta}>
+  <a
+    href="https://www.youtube.com/@asilbekielts" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.ctaButton}
+  >
+    {t('about.watchVideos')}
+  </a>
+
+  <a
+    href="https://www.threads.com/@asilbekielts" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.ctaButton}
+  >
+    {t('about.readArticles')}
+  </a>
+
+  <a
+    href="https://t.me/ieltsdelivered" 
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.ctaButton}
+  >
+    {t('about.readBook')}
+  </a>
+</div>
 
     </section>
   );

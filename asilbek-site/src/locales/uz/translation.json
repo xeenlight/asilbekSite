@@ -42,8 +42,19 @@
 
             "watchVideos": "Videolarni ko‘rish",
     "readArticles": "Maqolalarni o‘qing",
-    "readBook": "Kitoblarni o‘qing / Kurs"
+    "readBook": "Telegram darslar"
   },
+  "aboutSection": {
+  "hey": "Salom, men Asilbek Mahkamovman",
+  "subtitle": "Xalqaro darajadagi tajribaga ega ingliz tili o‘qituvchisi. 5 yildan ortiq vaqt davomida odamlarga ishonch bilan va erkin gapirishni o‘rgatib kelaman.",
+  "quickFacts": "Men haqimda qisqa faktlar",
+  "fact1": "2018-yildan beri ingliz tilidan dars beraman. Dastlab xususiy darslardan boshlaganman, hozir esa yuzlab o‘quvchilarga IELTS topshirishda va erkin muloqot qilishda yordam beraman.",
+  "fact2": "Shaxsiy natijam — IELTS 9.0 (Expert user). Tilni mukammal bilish: aniqlik, ravonlik va tabiiylik.",
+  "fact3": "Ona tilida so‘zlashuvchilarning sirlarini va isbotlangan o‘qitish usullarini birlashtirgan mualliflik metodikasini ishlab chiqdim.",
+  "fact4": "Minglab o‘quvchilar mening darslarim va materiallarim orqali ingliz tilini yaxshilab, o‘z maqsadlariga erishdilar.",
+  "fact5": "Foydali kontent yarataman: videolar, tahlillar, mashqlar va chiroyli hamda ishonch bilan gapirishni istaganlar uchun motivatsiya.",
+  "fact6": "Men qilayotgan barcha ishlar — sizga ingliz tilini tez va zavq bilan yuqori darajada o‘rganishga yordam berish istagi bilan."
+},
   "footer": {
   "logo": "Asilbek IELTS",
   "copy": "© Asilbek IELTS 2026. Barcha huquqlar himoyalangan.",
@@ -98,6 +109,15 @@
   "loading": "Eng yangi videolarni yuklayapmiz...",
   "error": "Videolarni yuklab bo‘lmadi. Birozdan keyin yana urinib ko‘ring.",
   "empty": "Hali videolar yo‘q"
+},
+"threads": {
+  "title": {
+    "part1": "Meni kuzating",
+    "accent": "Threads"
+  },
+  "subtitle": "Bu yerda men IELTS bo‘yicha qisqa fikrlar, insightlar va o‘quvchilar duch keladigan real savollar bilan bo‘lishaman. Bu — tayyorgarlikka boshqacha qarash, o‘ylash va muhokama orqali javob topish imkonini beradigan jonli format",
+  "button": "Threads ga o‘tish",
+  "note": "Siz shunchaki o‘qishingiz, real holatlarni kuzatishingiz yoki muhokamalarda faol qatnashishingiz mumkin"
 }
   
 }

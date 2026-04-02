@@ -44,8 +44,19 @@
 
             "watchVideos": "Watch Videos",
     "readArticles": "Read Articles",
-    "readBook": "Read Book / Course"
+    "readBook": "Learn on Telegram"
   },
+  "aboutSection": {
+  "hey": "Hi, I’m Asilbek Makhkamov",
+  "subtitle": "An English teacher with international-level expertise. For over 5 years, I have been helping people speak confidently and fluently.",
+  "quickFacts": "Quick facts about me",
+  "fact1": "I have been teaching English since 2018. I started with private lessons, and now I help hundreds of students pass IELTS and communicate freely.",
+  "fact2": "My personal result is IELTS 9.0 (Expert user). Full command of the language: accuracy, fluency, and naturalness.",
+  "fact3": "I developed my own teaching methodology that combines native speaker insights with proven learning techniques.",
+  "fact4": "Thousands of students have already improved their English and achieved their goals through my lessons and materials.",
+  "fact5": "I create useful content: videos, breakdowns, exercises, and motivation for those who want to speak beautifully and confidently.",
+  "fact6": "Everything I do is driven by a passion to help you reach a high level of English quickly and with enjoyment."
+},
   "footer": {
   "logo": "Asilbek IELTS",
   "copy": "© Asilbek IELTS 2026. All rights reserved.",
@@ -100,6 +111,15 @@
   "loading": "Loading latest videos...",
   "error": "Failed to load videos. Please try again later.",
   "empty": "No videos found yet"
+},
+"threads": {
+  "title": {
+    "part1": "Follow me on",
+    "accent": "Threads"
+  },
+  "subtitle": "I share short thoughts, insights, and real IELTS-related questions students face. It’s a dynamic format where you can explore preparation from a different perspective, reflect, and find answers through discussion",
+  "button": "Go to Threads",
+  "note": "You can simply read, follow real case discussions, or actively participate in conversations"
 }
   
 }

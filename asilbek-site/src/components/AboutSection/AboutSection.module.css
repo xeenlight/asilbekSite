@@ -1,5 +1,5 @@
 .aboutSection{
-  padding:140px 8% 120px;
+    padding: 40px 20px;
   background:var(--bg);
 }
 
@@ -121,7 +121,7 @@
 @media (max-width:640px){
 
   .aboutSection{
-    padding:100px 5% 80px;
+padding: 40px 20px ;
   }
 
   .titleWrapper{
