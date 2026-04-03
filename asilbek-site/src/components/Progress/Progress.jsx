@@ -51,7 +51,7 @@ function Progress() {
 
       // 🔥 2. НОВЫЕ ВИДЕО
       try {
-        const CHANNEL_ID = 'UCq3PlGB0_e6jTc9Jr2Al7LQ';
+        const CHANNEL_ID = 'UCDCjzYlOubu8Zi2FnkZ8oig';
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 

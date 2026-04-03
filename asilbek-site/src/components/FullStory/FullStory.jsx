@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./FullStory.module.css";
 import asilbekStory from "../../assets/images/asilbekStory.png";
+import asilbekStory1 from "../../assets/images/asilbekStory1.png";
+import asilbekStory2 from "../../assets/images/asilbekStory2.png";
 import asilbekStory3 from "../../assets/images/asilbekStory3.png";
 import asilbekStory4 from "../../assets/images/asilbekStory4.png";
 
@@ -34,7 +36,7 @@ function FullStory() {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            <img src={asilbekStory} className={styles.image} />
+            <img src={asilbekStory1} className={styles.image} />
           </motion.div>
         </div>
 
@@ -53,7 +55,7 @@ function FullStory() {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            <img src={asilbekStory4} className={styles.image} />
+            <img src={asilbekStory2} className={styles.image} />
           </motion.div>
         </div>
 
