@@ -4,9 +4,12 @@ import styles from "./Content.module.css";
 import IconTg from "../../assets/images/IconTg.png";
 import IconYT from "../../assets/images/IconYT.png";
 import IconOff from "../../assets/images/IconOff.png";
-function Content() {
-  const { t } = useTranslation();
 
+
+
+function Content() {
+  const { t, i18n } = useTranslation();
+  const isUz = i18n.language === 'uz' || i18n.language.startsWith('uz');
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -15,14 +18,18 @@ function Content() {
 
           {/* TITLE */}
           <div className={styles.titleBox}>
-            <h2 className={styles.title}>
-              <Trans
-                i18nKey="help.title"
-                components={{
-                  circle: <span className={styles.handCircle} />,
-                }}
-              />
-            </h2>
+    <h2 className={styles.title}>
+      <Trans
+        i18nKey="help.title"
+        components={{
+          circle: (
+            <span 
+              className={`${styles.handCircle} ${isUz ? styles.uz : ''}`} 
+            />
+          ),
+        }}
+      />
+    </h2>
           </div>
 
           {/* YOUTUBE BIG */}
