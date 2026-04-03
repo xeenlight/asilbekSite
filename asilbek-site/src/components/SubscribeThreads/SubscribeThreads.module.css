@@ -166,3 +166,13 @@
     text-align: center;
   }
 }
+.subscribe {
+  overflow: hidden;
+}
+.subscribe {
+  contain: layout;
+}
+.subscribe {
+  overflow: hidden;
+  contain: layout;
+}

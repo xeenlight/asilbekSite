@@ -28,10 +28,13 @@ function Content() {
           {/* YOUTUBE BIG */}
           <motion.div
             className={`${styles.card} ${styles.youtube}`}
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ 
+    duration: 0.4,      // было 0.7 — теперь быстрее
+    ease: "easeOut"     // плавное завершение
+  }}
           >
             <div className={styles.iconWrapper}>
               <img src={IconOff} className={styles.icon} alt="Offline Classes" />
@@ -50,10 +53,13 @@ function Content() {
           {/* PRODUCTIVITY */}
           <motion.div
             className={`${styles.card} ${styles.productivity}`}
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ 
+    duration: 0.4,      // было 0.7 — теперь быстрее
+    ease: "easeOut"     // плавное завершение
+  }}
           >
             <div className={styles.iconWrapper}>
               <img src={IconYT} className={styles.icon} alt="YouTube" />
@@ -72,10 +78,13 @@ function Content() {
           {/* BUSINESS */}
           <motion.div
             className={`${styles.card} ${styles.business}`}
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ 
+    duration: 0.4,      // было 0.7 — теперь быстрее
+    ease: "easeOut"     // плавное завершение
+  }}
           >
             <div className={styles.iconWrapper}>
               <img src={IconTg} className={styles.icon} alt="B9Lab" />
