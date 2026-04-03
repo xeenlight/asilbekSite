@@ -111,6 +111,10 @@ gap: 20px;
   }
 }
 @media(max-width:360px){
+  .storySection{
+padding: 16px 8px;
+  background:var(--bg);
+}
 .FullStory{
     background: var(--card);
     border-radius: 24px;

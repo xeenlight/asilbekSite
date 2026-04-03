@@ -132,6 +132,17 @@ background-position: 10% 0;
     gap: 30px;
     text-align: center;
     justify-items: center;
+      background:  /* затемнение */
+    url('../../assets/images/asilbekAboutMobile.png');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+background-position: 43% 0;
+
+  backdrop-filter: blur(12px);
   }
 
   .photoWrapper {
@@ -176,3 +187,15 @@ background-position: 10% 0;
     text-align: center;
   }
 }
+
+.subscribe {
+  overflow: hidden;
+}
+.subscribe {
+  contain: layout;
+}
+.subscribe {
+  overflow: hidden;
+  contain: layout;
+}
+

@@ -1,5 +1,4 @@
 // src/components/SubscribeTG/SubscribeTG.jsx
-import { motion } from "framer-motion";
 import styles from "./SubscribeTG.module.css";
 import qr from "../../assets/images/qr.png"; 
 import { useTranslation, Trans } from "react-i18next";
