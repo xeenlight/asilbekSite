@@ -58,7 +58,7 @@ background-position: 10% 0;
 
 .subtitle {
   font-size: 1rem;
-  color: #aaa;
+  color: var(--text-light);
   max-width: 480px;
 }
 
@@ -140,7 +140,7 @@ background-position: 10% 0;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-background-position: 43% 0;
+background-position: 45% 0;
 
   backdrop-filter: blur(12px);
   }

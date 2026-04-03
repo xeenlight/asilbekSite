@@ -125,6 +125,7 @@
 /* 📱 MOBILE */
 @media(max-width:900px){
   .container {
+    padding: 20px 14px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "image"
