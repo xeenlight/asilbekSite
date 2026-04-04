@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./YouTubeHero.module.css";
-import asilbek1 from "../../assets/images/asilbekMain2.png";
-
+import asilbek1 from "../../assets/images/YtMob1.png";
+import asilbek2 from "../../assets/images/YtMob2.png";
 function YouTubeHero() {
   const { t } = useTranslation();
 
@@ -139,7 +139,7 @@ function YouTubeHero() {
         <div className={styles.block}>
 
           <div className={`${styles.imageSide} ${styles.image2}`}>
-            <img src={asilbek1} alt="Asilbek" />
+            <img src={asilbek2} alt="Asilbek" />
           </div>
 
           <div className={styles.videoSide}>

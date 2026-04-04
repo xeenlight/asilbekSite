@@ -84,16 +84,6 @@ function Progress() {
   return (
     <section className={styles.progressSection} id="journey">
       <div className={styles.container}>
-
-        <motion.h2
-          className={styles.mainTitle}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          {t('progress.title')}
-        </motion.h2>
-
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
 

@@ -38,12 +38,13 @@ function SubscribeThreads() {
           transition={{ duration: 0.6 }}
         >
 
-          <h2 className={styles.title}>
-            {t("threads.title.part1")}{" "}
-            <span className={styles.accent}>
-              {t("threads.title.accent")}
-            </span>
-          </h2>
+<h2 className={styles.title}>
+  {t("threads.title.before")}{" "}
+  <span className={styles.accent}>
+    {t("threads.title.accent")}
+  </span>{" "}
+  {t("threads.title.after")}
+</h2>
 
           <p className={styles.subtitle}>
             {t("threads.subtitle")}

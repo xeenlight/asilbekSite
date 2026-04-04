@@ -27,7 +27,7 @@
     "subscribe": {
 
           "title": "Join <accent>IELTS Delivered</accent>",
-    "subtitle": "Become a part of a fast-growing online community and receive regular IELTS insights. Every day, I share actionable IELTS tips, proven preparation methods, and test-day strategies to help you perform at your best — free, and always will be.",
+    "subtitle": "Become a part of a fast-growing online community and receive regular IELTS insights. Every day, I share actionable IELTS tips, proven preparation methods, and test-day strategies to help you perform at your best — free, and always will be. You’ll also get access to real exam examples, common mistakes to avoid, and practical guidance tailored for all skill levels. Whether you’re just starting or aiming for a higher band score, this community is here to support your journey every step of the way.",
     "button": "Go to Telegram",
     "reviews": "200+ reviews",
     "note": "You can leave at any time by clicking the unsubscribe button"
@@ -36,7 +36,7 @@
   "about": {
     "hey": "Hi, I’m",
     "name": "Asilbek Makhkamov",
-    "intro": "I help students succeed in their exams with confidence. I’ve always loved learning—starting school two years early and graduating with a perfect 4.0 GPA. I carried that drive into university, earning another 4.0 in engineering.",
+    "intro": "I help students succeed in their exams with confidence. I’ve always loved learning—starting school two years early and graduating with a perfect 4.0 GPA. I carried that drive into university, earning another 4.0 in engineering. ",
     "story1": "My journey with IELTS began in 11th grade when I took the test myself and scored 7.5—higher than most teachers at the time. Inspired, I started working at a local test prep center, first as a teacher assistant, then as a full teacher. Over four years, I’ve guided over a thousand students to results far above Uzbekistan’s average—most scoring 6.5, 7, or higher.",
     "story2": "Today, I run my own test prep center, creating courses and resources to make exam preparation smarter, easier, and more effective. I’m now launching online programs to reach even more learners, helping them achieve high scores and pursue their academic goals without the stress.",
     "story3": "Education changed my life, and now I’m here to help students achieve their best results and unlock their potential.",
@@ -114,8 +114,9 @@
 },
 "threads": {
   "title": {
-    "part1": "Follow me on",
-    "accent": "Threads"
+    "before": "Follow me on",
+    "accent": "Threads",
+    "after": ""
   },
   "subtitle": "I share short thoughts, insights, and real IELTS-related questions students face. It’s a dynamic format where you can explore preparation from a different perspective, reflect, and find answers through discussion",
   "button": "Go to Threads",

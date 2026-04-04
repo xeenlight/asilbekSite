@@ -94,12 +94,12 @@
 
 /* разные фоны */
 .image1 {
-  background-image: url('../../assets/images/asilbekAbout3.png');
+  background-image: url('../../assets/images/asilbekAboutMobile.png');
     background-size: cover;
   background-repeat: no-repeat;
 
   /* 👇 вот тут магия */
-background-position: 10% 0;
+background-position: 45% 0;
 }
 
 .image2 {

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
-import aboutImage from "../../assets/images/asilbekAbout2.png";
+import aboutImage from "../../assets/images/asilbekHistor.png";
 
 function About() {
   const { t } = useTranslation();
@@ -49,38 +49,7 @@ function About() {
         </div>
 
       </motion.div>
-
-      {/* CTA */}
-<div className={styles.cta}>
-  <a
-    href="https://www.youtube.com/@asilbekielts" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.ctaButton}
-  >
-    {t('about.watchVideos')}
-  </a>
-
-  <a
-    href="https://www.threads.com/@asilbekielts" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.ctaButton}
-  >
-    {t('about.readArticles')}
-  </a>
-
-  <a
-    href="https://t.me/ieltsdelivered" 
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.ctaButton}
-  >
-    {t('about.readBook')}
-  </a>
-</div>
-
-    </section>
+  </section>
   );
 }
 

@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './AboutSection.module.css';
-import asilbekMain2 from "../../assets/images/asilbekMain2.png";
 
 function AboutSection() {
   const { t } = useTranslation();

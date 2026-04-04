@@ -112,9 +112,11 @@
 },
 "threads": {
   "title": {
-    "part1": "Meni kuzating",
-    "accent": "Threads"
+    "before": "Meni",
+    "accent": "Threads'da",
+    "after": "kuzating"
   },
+
   "subtitle": "Bu yerda men IELTS bo‘yicha qisqa fikrlar, insightlar va o‘quvchilar duch keladigan real savollar bilan bo‘lishaman. Bu — tayyorgarlikka boshqacha qarash, o‘ylash va muhokama orqali javob topish imkonini beradigan jonli format",
   "button": "Threads ga o‘tish",
   "note": "Siz shunchaki o‘qishingiz, real holatlarni kuzatishingiz yoki muhokamalarda faol qatnashishingiz mumkin"
