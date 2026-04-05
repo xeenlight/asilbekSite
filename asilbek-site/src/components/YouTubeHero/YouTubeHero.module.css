@@ -94,16 +94,16 @@
 
 /* разные фоны */
 .image1 {
-  background-image: url('../../assets/images/asilbekAboutMobile.png');
+  background-image: url('../../assets/images/asilbekYT2.png');
     background-size: cover;
   background-repeat: no-repeat;
 
   /* 👇 вот тут магия */
-background-position: 45% 0;
+background-position: 90% 0;
 }
 
 .image2 {
-  background-image: url('../../assets/images/asilbekAbout3.png');
+  background-image: url('../../assets/images/asilbekYT.png');
     background-size: cover;
   background-repeat: no-repeat;
 
@@ -131,6 +131,7 @@ background-position: 10% 0;
   .image1 {
     order: 1;
     background: none;
+            display: none;
   }
 
   .block:first-child .videoSide {

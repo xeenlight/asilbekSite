@@ -45,7 +45,7 @@ function YouTubeHero() {
 
       // 🔥 2. НОВЫЕ ВИДЕО (через прокси)
       try {
-        const CHANNEL_ID = "UCq3PlGB0_e6jTc9Jr2Al7LQ";
+        const CHANNEL_ID = "UCDCjzYlOubu8Zi2FnkZ8oig";
         const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
         const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
@@ -129,7 +129,7 @@ function YouTubeHero() {
             </div>
 
             <div className={`${styles.imageSide} ${styles.image1}`}>
-              <img src={asilbek1} alt="Asilbek" />
+
             </div>
 
           </div>
@@ -139,7 +139,7 @@ function YouTubeHero() {
         <div className={styles.block}>
 
           <div className={`${styles.imageSide} ${styles.image2}`}>
-            <img src={asilbek2} alt="Asilbek" />
+
           </div>
 
           <div className={styles.videoSide}>

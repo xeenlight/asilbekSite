@@ -7,7 +7,7 @@
   "hero": {
     "hey": "Salom do’stlar",
     "title": "Men Asilbekman",
-    "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. <highlight>Mening shaxsiy natijam 8.5</highlight>, va <highlight>1 000 dan ortiq talaba</highlight> men bilan o‘qib, o’z maqsadlariga erishgan,<highlight> ularning 100+ </highlight>nafari <highlight>7+ qo‘lga kiritgan.</highlight>",
+    "intro": "5 yildan ortiq vaqt davomida talabalarni IELTS ga tayyorlab kelaman. Mening shaxsiy <highlight>natijam 8.5</highlight>, va <highlight>1 000 dan</highlight> ortiq talaba men bilan o‘qib, o’z maqsadlariga erishgan, <highlight>ularning 100+ </highlight>nafari <highlight>7+ qo‘lga kiritgan.</highlight>",
     "subscribeTitle": "Подпишись на мой Telegram-канал",
     "subscribeText": "Получай ежедневные советы по английскому, разборы сложных тем, мотивацию и полезные материалы прямо в телефон. Всё бесплатно.",
     "telegramPlaceholder": "Твой @username в Telegram",
@@ -15,7 +15,7 @@
     "note": "Нажимая кнопку, ты соглашаешься получать сообщения от канала. Отписаться можно в любой момент."
   },
 "subscribe": {
-  "title": "Qo‘shiling <accent>ELTS Delivered’ga </accent>",
+  "title": "<accent>IELTS Delivered</accent> ga Qo’shiling",
   
   "subtitle": "Tez rivojlanayotgan onlayn hamjamiyatning bir qismiga aylaning va IELTS bo‘yicha muntazam foydali ma’lumotlarni oling. Har kuni men amaliy IELTS maslahatlari, sinalgan tayyorgarlik usullari va imtihon kuni uchun strategiyalarni ulashaman — eng yaxshi natijaga erishishingiz uchun, bepul va har doim shunday bo‘ladi.",
   "button": "Telegram-ga o'tish",
