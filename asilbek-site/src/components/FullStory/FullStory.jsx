@@ -98,23 +98,15 @@ function FullStory() {
         </div>
 
         {/* BLOCK 5 */}
-        <div className={styles.row}>
-          <motion.div
-            className={styles.text}
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-          >
-            <p>{t("story.part5")}</p>
-          </motion.div>
-
-          <motion.div
-            className={styles.imageWrapper}
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-          >
-            <img src={asilbekStory} className={styles.image} />
-          </motion.div>
-        </div>
+<div className={`${styles.row} ${styles.fullWidthRow}`}>
+  <motion.div
+    className={styles.text}
+    initial={{ opacity: 0, x: -60 }}
+    whileInView={{ opacity: 1, x: 0 }}
+  >
+    <p>{t("story.part5")}</p>
+  </motion.div>
+</div>
       </div>
       </div>
     </section>

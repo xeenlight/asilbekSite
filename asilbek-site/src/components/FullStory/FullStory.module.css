@@ -133,3 +133,7 @@ padding: 16px 8px;
     font-size:.9rem;
   }
 }
+.fullWidthRow{
+  grid-template-columns: 1fr; /* только 1 колонка */
+  border-radius: 0;
+}

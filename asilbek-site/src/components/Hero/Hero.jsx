@@ -18,18 +18,18 @@ function Hero() {
         transition={{ duration: 0.9 }}
       >
         <h2 className={styles.hey}>
-          {t("hero.hey")} <span className={styles.wave}>👋</span>
+          {t("AsilbekIELTS.hey")} <span className={styles.wave}>👋</span>
         </h2>
 
         <h1 
           className={`${styles.title} ${isUzbek ? styles.titleSmall : ''}`}
         >
-          {t("hero.title")}
+          {t("AsilbekIELTS.title")}
         </h1>
 
         <p className={styles.intro}>
           <Trans
-            i18nKey="hero.intro"
+            i18nKey="AsilbekIELTS.intro"
             components={{
               highlight: <span className={styles.highlight} />,
             }}
