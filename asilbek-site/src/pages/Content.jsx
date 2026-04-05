@@ -2,14 +2,14 @@ import Navbar from "../components/Navbar/Navbar"
 import Subscribe from "../components/Subscribe/Subscribe"
 import SubscribeTG from "../components/SubscribeTGContent/SubscribeTGContent"
 import SubscribeThreads from "../components/SubscribeThreads/SubscribeThreads"
-import YouTubeHero from "../components/YouTubeHero/YouTubeHero"
+import Progress from "../components/Progress/Progress"
 
 function Content(){
   return(
     <>
         <Navbar/>
 <SubscribeTG/>
-<YouTubeHero/>
+<Progress/>
 <SubscribeThreads/>
     <Subscribe/>
     </>

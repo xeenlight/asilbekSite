@@ -183,9 +183,9 @@ h3{
 }
 
 /* ADAPTIVE */
-@media (max-width:1024px){
-  .grid{
-    grid-template-columns:1fr;
+@media (max-width:1024px) {
+  .grid {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "title"
       "youtube"
@@ -193,15 +193,22 @@ h3{
       "business"
       "grades"
       "more";
-    grid-template-rows:auto;
+    grid-template-rows: auto;
+         gap: 60px;
   }
-.youtube{ grid-row:span 2; }
-.productivity{ grid-row:span 2; }
-.business{ grid-row:span 2; }
-.grades{ grid-row:span 2; }
-.more{ grid-row:span 2; }
-  .title{
-    font-size:3rem;
+
+  .youtube, .productivity, .business, .grades, .more {
+    grid-row: span 2;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  /* 🔥 увеличиваем высоту карточек на 30px */
+  .card {
+    min-height: calc(100% + 40px);
+
   }
 }
 

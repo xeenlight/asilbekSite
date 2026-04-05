@@ -91,16 +91,16 @@
   "getStarted": "Get Started",
   "cards": {
     "productivity": {
-      "title": "Free YouTube",
-      "desc": "Free English lessons on YouTube: proven working methods tested on hundreds of students, step-by-step strategies for rapid progress, real case studies, and advice from those who have already achieved results"
+      "title": "Free IELTS lessons on YouTube",
+      "desc": "Free English lessons on YouTube: proven working methods tested on hundreds of students, step-by-step strategies for rapid progress, real case studies, and advice from those who have already achieved results."
     },
     "youtube": {
       "title": "Offline Classes",
-      "desc": "Personalized approach for each student, lessons starting from 2 hours with deep immersion, structured preparation, and development of strong academic English skills"
+      "desc": "Personalized approach for each student, lessons starting from 2 hours with deep immersion, structured preparation, and development of strong academic English skills. Message my administrator on Telegram to book a lesson."
     },
     "business": {
       "title": "Private Club B9Lab",
-      "desc": "Full access to a library of recorded lessons, exclusive streams, detailed homework reviews, as well as personal recommendations and continuous support at every stage"
+      "desc": "Full access to a library of recorded lessons, exclusive streams, detailed homework reviews, as well as personal recommendations and continuous support at every stage. Message my administrator to get access to the private club."
     }
   }
 },

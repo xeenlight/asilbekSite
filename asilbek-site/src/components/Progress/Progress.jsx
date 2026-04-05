@@ -13,9 +13,8 @@ function Progress() {
   const [error, setError] = useState(false);
 
   const recommendedVideos = [
-    { id: 'bI3bAl5j9Qg' },
-    { id: 'uMFOSvXz80I' },
-    { id: 'qnzy1Wre4to' },
+    { id: 'M3FNjV4br7k' },
+
   ];
 
   useEffect(() => {
@@ -63,10 +62,7 @@ function Progress() {
           throw new Error('Proxy died');
         }
 
-        const filtered = data.items.filter(item => {
-          const id = item.link.split('v=')[1]?.split('&')[0];
-          return !recommendedVideos.some(v => v.id === id);
-        });
+const filtered = data.items.slice(0, 3);
 
         setVideos(filtered.slice(0, 3));
       } catch (err) {

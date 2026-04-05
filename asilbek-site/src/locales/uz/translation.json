@@ -89,16 +89,16 @@
   "getStarted": "Boshlash",
   "cards": {
     "productivity": {
-      "title": "Bepul YouTube",
-      "desc": "YouTube’da bepul ingliz tili darslari: yuzlab o‘quvchilar ustida sinovdan o‘tgan samarali usullar, bosqichma-bosqich tez taraqqiyot strategiyalari, real kase'larni tahlil qilish va natijaga erishganlarning maslahatlari"
+      "title": "YouTube’da bepul IELTS darslari",
+      "desc": "YouTube’da bepul ingliz tili darslari: yuzlab o‘quvchilar ustida sinovdan o‘tgan samarali usullar, bosqichma-bosqich tez taraqqiyot strategiyalari, real kase'larni tahlil qilish va natijaga erishganlarning maslahatlari."
     },
     "youtube": {
       "title": "Offline darslar",
-      "desc": "Har bir o‘quvchi uchun individual yondashuv, 2 soatdan boshlab chuqur darslar, tizimli tayyorgarlik va akademik ingliz tilini yuqori darajaga olib chiqish"
+      "desc": "Har bir o‘quvchi uchun individual yondashuv, 2 soatdan boshlab chuqur darslar, tizimli tayyorgarlik va akademik ingliz tilini yuqori darajaga olib chiqish. Darsga yozilish uchun Telegram’da administratorimga yozing."
     },
     "business": {
       "title": "Yopiq klub B9Lab",
-      "desc": "Yozib olingan darslar kutubxonasiga to‘liq kirish, yopiq strimlar, uy vazifalarining batafsil tahlili, shuningdek har bir bosqichda shaxsiy tavsiyalar va doimiy qo‘llab-quvvatlash"
+      "desc": "Yozib olingan darslar kutubxonasiga to‘liq kirish, yopiq strimlar, uy vazifalarining batafsil tahlili, shuningdek har bir bosqichda shaxsiy tavsiyalar va doimiy qo‘llab-quvvatlash. Yopiq klubga kirish uchun administratorimga yozing."
     }
   }
 },

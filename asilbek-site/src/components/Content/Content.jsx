@@ -102,7 +102,7 @@ function Content() {
               {t("help.cards.business.desc")}
             </p>
 
-            <a href="https://t.me/ieltsdelivered" className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/IELTS_Lab_admin" className={styles.link} target="_blank" rel="noopener noreferrer">
               {t("help.getStarted")} →
             </a>
           </motion.div>
