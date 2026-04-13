@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./FullStory.module.css";
-import asilbekStory2 from "../../assets/images/asilbekStory1.png";
-import asilbekStory3 from "../../assets/images/asilbekStory2.png";
-import asilbekStory1 from "../../assets/images/asilbekStory3.png";
-import asilbekStory4 from "../../assets/images/asilbekStory4.png";
+import asilbekStory2 from "../../assets/images/asilbekStory1.webp";
+import asilbekStory3 from "../../assets/images/asilbekStory2.webp";
+import asilbekStory1 from "../../assets/images/asilbekStory3.webp";
+import asilbekStory4 from "../../assets/images/asilbekStory4.webp";
 
 function FullStory() {
   const { t } = useTranslation();

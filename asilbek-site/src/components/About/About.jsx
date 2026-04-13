@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
-import aboutImage from "../../assets/images/asilbekHistor.png";
+import aboutImage from "../../assets/images/asilbekHistor.webp";
 
 function About() {
   const { t } = useTranslation();

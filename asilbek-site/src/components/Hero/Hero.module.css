@@ -10,7 +10,7 @@
 
   overflow: hidden;
  height: clamp(550px, 18.75vw + 490px, 850px);
-   background-image: url("../../assets/images/asilbekMain2Big.png");
+   background-image: url("../../assets/images/asilbekMain2Big.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@ z-index: 3;
 
 @media (max-width: 900px) {
   .hero {
-    background-image: url("../../assets/images/asilbekMainPhone.png");
+    background-image: url("../../assets/images/asilbekMainPhone.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

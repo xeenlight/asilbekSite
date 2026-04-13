@@ -16,7 +16,7 @@
 
   /* 🔥 ВОТ ГЛАВНОЕ */
   background:  /* затемнение */
-    url('../../assets/images/asilbekAbout3.png');
+    url('../../assets/images/asilbekAbout3.webp');
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ background-position: 10% 0;
     text-align: center;
     justify-items: center;
       background:  /* затемнение */
-    url('../../assets/images/asilbekAboutMobile.png');
+    url('../../assets/images/asilbekAboutMobile.webp');
 
   background-size: cover;
   background-repeat: no-repeat;
