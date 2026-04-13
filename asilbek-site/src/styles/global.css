@@ -44,7 +44,7 @@ a{
 }
 @font-face {
   font-family: 'Sofia Sans Semi Condensed';
-  src: url('/fonts/SofiaSansCondensed-Regular.woff2') format('woff2');
+  src: url('/fonts/SofiaSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -52,7 +52,7 @@ a{
 
 @font-face {
   font-family: 'Sofia Sans Semi Condensed';
-  src: url('/fonts/SofiaSansCondensed-Bold.woff2') format('woff2');
+  src: url('/fonts/SofiaSans-ExtraBold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
