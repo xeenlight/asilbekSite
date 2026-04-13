@@ -1,6 +1,6 @@
 // src/components/SubscribeTG/SubscribeTG.jsx
 import styles from "./SubscribeTG.module.css";
-import qr from "../../assets/images/qr.png"; 
+import qr from "../../assets/images/qr.webp"; 
 import { useTranslation, Trans } from "react-i18next";
 function SubscribeTG() {
   const { t } = useTranslation();

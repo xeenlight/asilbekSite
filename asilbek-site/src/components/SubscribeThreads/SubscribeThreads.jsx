@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import styles from "./SubscribeThreads.module.css";
-import asilbek from "../../assets/images/thr.png";
+import asilbek from "../../assets/images/thr.webp";
 
 function SubscribeThreads() {
   const { t } = useTranslation();

@@ -1,9 +1,9 @@
 import styles from "./Subscribe.module.css"
 import { useTranslation } from "react-i18next"
-import inst from "../../assets/images/inst.png"
-import yt from "../../assets/images/yt.png"
-import tg from "../../assets/images/tg.png"
-import th from "../../assets/images/th.png"
+import inst from "../../assets/images/inst.webp"
+import yt from "../../assets/images/yt.webp"
+import tg from "../../assets/images/tg.webp"
+import th from "../../assets/images/th.webp"
 
 function Subscribe(){
 

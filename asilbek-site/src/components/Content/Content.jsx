@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
 import styles from "./Content.module.css";
-import IconTg from "../../assets/images/IconTg.png";
-import IconYT from "../../assets/images/IconYT.png";
-import IconOff from "../../assets/images/IconOff.png";
+import IconTg from "../../assets/images/IconTg.webp";
+import IconYT from "../../assets/images/IconYT.webp";
+import IconOff from "../../assets/images/IconOff.webp";
 
 
 
