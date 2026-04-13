@@ -4,23 +4,117 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './Progress.module.css';
 
+function YouTubeFacade({ videoId, title }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+
+  if (isPlaying) {
+    return (
+      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, background: '#000' }}>
+        <iframe
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        paddingBottom: '56.25%',
+        height: 0,
+        background: '#111',
+        borderRadius: '12px 12px 0 0',
+        overflow: 'hidden',
+        cursor: 'pointer',
+      }}
+      onClick={() => setIsPlaying(true)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && setIsPlaying(true)}
+    >
+      <img
+        src={thumbnailUrl}
+        alt={title}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+        }}
+        loading="lazy"
+      />
+
+      {/* Play кнопка */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '68px',
+          height: '48px',
+          background: 'rgba(0, 0, 0, 0.7)',
+          borderRadius: '12px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+        }}
+      >
+        <div
+          style={{
+            width: 0,
+            height: 0,
+            borderTop: '10px solid transparent',
+            borderBottom: '10px solid transparent',
+            borderLeft: '18px solid #fff',
+            marginLeft: '4px',
+          }}
+        />
+      </div>
+
+      {/* Градиент */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '40%',
+          background: 'linear-gradient(transparent, rgba(0,0,0,0.6))',
+        }}
+      />
+    </div>
+  );
+}
+
 function Progress() {
   const { t } = useTranslation();
 
-  const [videos, setVideos] = useState([]);
   const [recommended, setRecommended] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
 
   const recommendedVideos = [
     { id: 'M3FNjV4br7k' },
-
   ];
 
   useEffect(() => {
-    const fetchAll = async () => {
-
-      // 🔥 1. РЕКОМЕНДОВАННЫЕ
+    const fetchRecommended = async () => {
       try {
         const recWithTitles = await Promise.all(
           recommendedVideos.map(async (video) => {
@@ -29,16 +123,9 @@ function Progress() {
                 `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${video.id}&format=json`
               );
               const json = await res.json();
-
-              return {
-                id: video.id,
-                title: json.title,
-              };
+              return { id: video.id, title: json.title || 'Видео' };
             } catch {
-              return {
-                id: video.id,
-                title: 'Видео',
-              };
+              return { id: video.id, title: 'Рекомендованное видео' };
             }
           })
         );
@@ -47,34 +134,9 @@ function Progress() {
       } catch (e) {
         console.error("Ошибка recommended", e);
       }
-
-      // 🔥 2. НОВЫЕ ВИДЕО
-      try {
-        const CHANNEL_ID = 'UCDCjzYlOubu8Zi2FnkZ8oig';
-        const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
-        const proxyUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-
-        const response = await fetch(proxyUrl);
-        const data = await response.json();
-
-        // 💥 защита от дохлого прокси
-        if (!data.items || data.status !== 'ok') {
-          throw new Error('Proxy died');
-        }
-
-const filtered = data.items.slice(0, 3);
-
-        setVideos(filtered.slice(0, 3));
-      } catch (err) {
-        console.error("Ошибка RSS", err);
-        setError(true);
-        setVideos([]);
-      } finally {
-        setLoading(false);
-      }
     };
 
-    fetchAll();
+    fetchRecommended();
   }, []);
 
   return (
@@ -83,7 +145,7 @@ const filtered = data.items.slice(0, 3);
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
 
-            {/* 🔥 РЕКОМЕНДОВАННЫЕ */}
+            {/* Рекомендованные */}
             <h3 className={styles.hRecommend}>
               {t('progress.recommended')}
             </h3>
@@ -107,27 +169,14 @@ const filtered = data.items.slice(0, 3);
                     boxShadow: '0 6px 20px rgba(0,0,0,0.3)'
                   }}
                 >
-                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                    <iframe
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%'
-                      }}
-                      src={`https://www.youtube.com/embed/${video.id}?rel=0`}
-                      title={video.title}
-                      frameBorder="0"
-                      allowFullScreen
-                    />
-                  </div>
+                  <YouTubeFacade videoId={video.id} title={video.title} />
 
                   <div style={{ padding: '12px 16px' }}>
                     <p style={{
                       fontWeight: 600,
                       fontSize: '1.05rem',
-                      color: '#eee'
+                      color: '#eee',
+                      margin: 0
                     }}>
                       {video.title}
                     </p>
@@ -135,81 +184,6 @@ const filtered = data.items.slice(0, 3);
                 </motion.div>
               ))}
             </div>
-
-            {/* 🔥 НОВЫЕ ВИДЕО */}
-            {!error && videos.length > 0 && (
-              <>
-                <h3 className={styles.hRecommend}>
-                  {t('progress.latest')}
-                </h3>
-
-                {loading ? (
-                  <p>{t('progress.loading')}</p>
-                ) : (
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '24px'
-                  }}>
-                    {videos.map((video, index) => {
-                      const videoId =
-                        video.link.split('v=')[1]?.split('&')[0];
-
-                      return (
-                        <motion.div
-                          key={videoId || index}
-                          initial={{ opacity: 0, y: 30 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.1 }}
-                          style={{
-                            borderRadius: '12px',
-                            overflow: 'hidden',
-                            background: '#111',
-                            boxShadow: '0 6px 20px rgba(0,0,0,0.3)'
-                          }}
-                        >
-                          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                            <iframe
-                              style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%'
-                              }}
-                              src={`https://www.youtube.com/embed/${videoId}?rel=0`}
-                              title={video.title}
-                              frameBorder="0"
-                              allowFullScreen
-                            />
-                          </div>
-
-                          <div style={{ padding: '12px 16px' }}>
-                            <p style={{
-                              fontWeight: 600,
-                              marginBottom: '8px',
-                              fontSize: '1.05rem',
-                              color: '#eee'
-                            }}>
-                              {video.title}
-                            </p>
-
-                            <small style={{ color: '#aaa' }}>
-                              {new Date(video.pubDate).toLocaleDateString('ru-RU', {
-                                day: 'numeric',
-                                month: 'long',
-                                year: 'numeric'
-                              })}
-                            </small>
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                )}
-              </>
-            )}
 
           </div>
         </div>
